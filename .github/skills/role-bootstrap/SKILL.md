@@ -35,7 +35,18 @@
 
 ### Step 1: 角色訪談 [interactive]
 
-載入 `.github/prompts/role-interview.prompt.md` 的訪談結構，向使用者提問以下 6 個問題（可以對話方式進行，不需要使用者正式填寫）：
+**1a. Archetype 匹配（自動）**
+
+先讀取 `context/archetypes/_index.yaml`，根據使用者描述的角色自動匹配最接近的原型：
+- 若有匹配 → 載入對應的 `archetype.yaml` 作為預設值，告知使用者「已匹配到 [原型名稱] 原型，以下預設值可直接採用或調整」
+- 若無匹配 → 告知使用者「未找到匹配的角色原型，將從空白開始訪談」
+- 若有部分匹配 → 列出候選原型和 `variants_hint`，讓使用者選擇最接近的
+
+匹配到原型後，使用 `discovery_questions` 引導使用者客製化，而非逐一詢問所有問題。
+
+**1b. 結構化訪談**
+
+載入 `.github/prompts/role-interview.prompt.md` 的訪談結構，向使用者提問以下 6 個問題（可以對話方式進行，不需要使用者正式填寫）。若已載入 archetype 預設值，可跳過已有答案的問題，聚焦在需要客製的部分：
 
 1. **角色基本資料**：名稱（中文）、英文 alias、類型（Expert/Project）
 2. **一句話定位**：格式「確保 [目標] 在 [約束條件] 下 [達成方式]」，引導使用者凝練出 one_liner
@@ -53,7 +64,7 @@
 - 每個初始 Skill 的 alias 與觸發條件
 
 參照 `context/framework/agent-role-repo-framework-v2.md` 確認結構符合規範。
-參照 `context/examples/` 確認結構品質。
+若使用了 archetype，參照 `context/archetypes/` 對應的 `sample-principles.md` 作為品質基準。
 
 輸出：目錄結構圖，等待使用者確認。
 

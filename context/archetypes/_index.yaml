@@ -1,0 +1,45 @@
+schema_version: "1.0"
+last_updated: "2026-03-02"
+description: "角色原型索引 - 提供各類角色的預設值和引導問題，加速 role-bootstrap 流程"
+
+archetypes:
+  - name: "產品經理"
+    alias: "pm"
+    icon: "📋"
+    description: "負責產品策略、需求定義、優先順序決策"
+    path: "context/archetypes/pm/archetype.yaml"
+    tags: ["business", "strategy", "cross-functional"]
+
+  - name: "架構師"
+    alias: "architect"
+    icon: "🏗️"
+    description: "負責系統架構設計、技術選型、跨組件介面"
+    path: "context/archetypes/architect/archetype.yaml"
+    tags: ["technical", "design", "system"]
+
+  - name: "領域專家"
+    alias: "domain-expert"
+    icon: "🎯"
+    description: "負責特定業務領域的知識、規則、最佳實踐"
+    path: "context/archetypes/domain-expert/archetype.yaml"
+    tags: ["domain", "knowledge", "rules"]
+
+  - name: "考試輔助師"
+    alias: "exam-tutor"
+    icon: "📚"
+    description: "協助學習者準備考試、掌握知識點、模擬測驗"
+    path: "context/archetypes/exam-tutor/archetype.yaml"
+    tags: ["education", "learning", "assessment"]
+
+  - name: "IT 認證備考輔助師"
+    alias: "cert-tutor"
+    icon: "🎓"
+    parent: "exam-tutor"
+    description: "專注 IT／資訊技術認證考試的備考輔助（題庫管理、考點解析、弱點追蹤）"
+    path: "context/archetypes/cert-tutor/archetype.yaml"
+    tags: ["education", "certification", "IT", "cloud", "assessment"]
+
+# 使用方式：
+# 1. role-bootstrap 時詢問「是否有匹配的角色原型？」
+# 2. 若有，載入對應的 archetype.yaml 作為預設值
+# 3. 用 discovery_questions 引導使用者客製化

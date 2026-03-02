@@ -11,6 +11,11 @@
 - [ ] .ai/ 五個子目錄全部存在（knowledge/、interfaces/、memory/ 等）
 - [ ] AGENTS.md 存在且在 32KB 以內
 
+## Archetype 運用
+
+- [ ] 若有匹配原型，已在 decisions.md 記錄採用了哪個 archetype、客製了哪些欄位
+- [ ] 若無匹配原型，已在 decisions.md 記錄原因
+
 ## 身份品質（identity.yaml）
 
 - [ ] 包含全部 8 個頂層 key（schema_version, type, role, identity, capabilities, boundaries, quality_criteria, anti_patterns）

@@ -1,0 +1,20 @@
+# _registry.yaml — 協作參與者註冊表
+# 每個加入協作的角色 Repo 在此登記
+# 用途：讓任何角色快速查到「誰能幫我做什麼」
+
+schema_version: "1.0"
+last_updated: "{{DATE}}"
+
+participants:
+  - alias: "{{ROLE_ALIAS}}"
+    name: "{{ROLE_NAME_ZH}}"
+    icon: "{{ROLE_ICON}}"
+    repo_path: "../{{ROLE_REPO_NAME}}"
+    exports_ref: ".ai/interfaces/exports.yaml"
+    status: active                    # active | inactive | deprecated
+    can_handle:
+      - alias: "{{SKILL_ALIAS_1}}"
+        description: "{{SKILL_DESCRIPTION_1}}"
+      - alias: "{{SKILL_ALIAS_2}}"
+        description: "{{SKILL_DESCRIPTION_2}}"
+    preferred_collab_style: "{{COLLAB_STYLE}}"

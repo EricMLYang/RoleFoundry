@@ -29,5 +29,5 @@
 
 **觀察**：role-bootstrap/examples/ 在初始版本中是空的，但開發計畫要求 M1 要有範例。
 **根因**：規範要求「examples/ 必須存在」，但「內容」需要真實使用後才能填充。這是雞蛋問題——要有工具才能產生範例，要有範例工具才能跑好。
-**改善**：context/examples/ 下的 3 個角色範例（architect/pm/domain-expert）可以作為 role-bootstrap/examples/ 的初始範例來源。Phase 4 完成後補充正式範例對。
-**狀態**：暫以 context/examples/ 作為品質對照，role-bootstrap/examples/ 待第一次真實端到端後補充
+**改善**：context/examples/ 已替換為 context/archetypes/，各原型包含預設值、引導問題和 sample-principles，role-bootstrap 可直接整合使用。
+**狀態**：已完成（ADR-004）

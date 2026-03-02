@@ -56,7 +56,7 @@ B. 使用純文字 .tmpl 檔案，以 `{{PLACEHOLDER}}` 標記佔位
 ## ADR-003: 範例庫放 context/examples/ 而非獨立 Repo
 
 **日期**：2026-03-02
-**狀態**：確定
+**狀態**：~~確定~~ 已被 ADR-004 取代
 
 **情境**：
 需要決定範例角色 Repo（architect、PM、domain-expert）的存放位置。可選擇：
@@ -74,3 +74,31 @@ B. 放在 RoleFoundry 的 context/examples/ 目錄下
 - 犧牲了範例的獨立版控和真實的「可 clone 使用」特性
 - 換取了即時可取用性和版本一致性
 - 緩解方案：每個範例包含 `generated-with.md`，說明如何用 role-bootstrap 產生可獨立使用的完整 Repo
+
+---
+
+## ADR-004: 以 Archetypes 取代 Examples，作為 role-bootstrap 的初始來源
+
+**日期**：2026-03-02
+**狀態**：確定
+
+**情境**：
+原本 `context/examples/` 放的是「已完成的角色範例」（展示用），但實際使用中發現：
+- 範例是完成品，role-bootstrap 需要的是「起點」而非「終點」
+- 範例缺少引導問題，Agent 無法用它來引導使用者客製化
+- 不同角色需要不同的初始值和發現式問題
+
+**選項**：
+A. 保留 examples 並新增 archetypes（兩套並存）
+B. 用 archetypes 完全取代 examples
+
+**決策**：選項 B — 用 `context/archetypes/` 完全取代 `context/examples/`
+
+**理由**：
+- Archetype 包含 defaults（預設值）+ discovery_questions（引導問題）+ sample-principles（範本），比純 example 更有用
+- 避免兩套參考來源造成的混淆（examples 和 archetypes 有重疊）
+- role-bootstrap 流程可直接整合 archetype 匹配，提升鍛造效率
+
+**Trade-off**：
+- 犧牲了「完整範例可直接抄」的便利性
+- 換取了「有引導的客製化起點」和更流暢的 bootstrap 體驗

@@ -1,0 +1,39 @@
+# _collab/ — 跨角色協作中樞
+
+> 本資料夾是多個角色 Repo 之間的中立溝通區域。
+> 所有角色可在此發起請求、回應、討論與產出共同成果。
+> **任何角色不應直接修改其他角色 Repo 的檔案。**
+
+---
+
+## 設計原則
+
+1. **中立地帶**：不屬於任何角色，所有角色平等使用
+2. **檔案即訊息**：每個檔案就是一次溝通，用檔名協議取代複雜路由
+3. **非侵入性**：各角色 Repo 保持完全自治，`_collab/` 只是橋樑
+4. **可追溯**：所有協作過程都是 Markdown 檔案，天然版控
+
+---
+
+## 資料夾結構
+
+```
+_collab/
+├── README.md              ← 本文件
+├── _registry.yaml         ← 參與者註冊表
+├── requests/              ← 任務請求
+├── responses/             ← 任務回應
+├── discussions/           ← 多輪討論
+├── artifacts/             ← 協作產出物
+└── _archive/              ← 已結案歸檔
+```
+
+## 檔名規範
+
+- requests / responses：`{YYYY-MM-DD}_{from}-to-{to}_{topic}.md`
+- discussions：`{YYYY-MM-DD}_{topic}/{序號}_{role}_{action}.md`
+- artifacts：`{YYYY-MM-DD}_{topic}.md`
+
+## 完整使用說明
+
+見 RoleFoundry 的 `_collab/README.md` 或 `context/references/` 中的協作協議文件。

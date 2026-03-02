@@ -49,7 +49,7 @@
 - `.ai/interfaces/` — 跨 Repo 介面（exports/imports）
 - `.ai/memory/` — 決策記錄與經驗教訓
 - `context/framework/` — Framework v2 完整規範
-- `context/examples/` — 已鍛造的角色範例
+- `context/archetypes/` — 角色原型（預設值 + 引導問題）
 - `templates/` — 空白模板（.tmpl 格式）
 - `tools/` — 輔助腳本（scaffold.sh, validate-repo.sh）
 

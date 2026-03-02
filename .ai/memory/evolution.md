@@ -63,9 +63,7 @@
 ## Phase 4 完成（2026-03-02）— M4: Battle-tested
 
 **新增的範例與文件**：
-- `context/examples/architect-example/`（identity.yaml + principles.md）
-- `context/examples/pm-example/`（identity.yaml）
-- `context/examples/domain-expert-example/`（VMS 領域專家 identity.yaml）
+- `context/archetypes/`（取代原 context/examples/，含 pm/architect/domain-expert/exam-tutor 四個原型）
 - `context/references/agent-patterns.md`
 - `context/references/prompt-engineering.md`
 - `docs/getting-started.md`（5 步驟快速上手 + 驗證工具）

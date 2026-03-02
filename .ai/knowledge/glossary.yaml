@@ -62,7 +62,7 @@ terms:
 
   - term: "context/"
     definition: "大量原始參考資料目錄，如 Framework 完整文件、領域資料、參考書；需要深度背景時才載入"
-    see_also: ["knowledge/", "context/framework/", "context/examples/"]
+    see_also: ["knowledge/", "context/framework/", "context/archetypes/"]
 
   - term: "knowledge/"
     definition: "精煉後的核心知識目錄，包含規範精要、命名規範、術語表、經驗法則；所有產出都必須符合此處規範"

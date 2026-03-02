@@ -91,5 +91,5 @@ docs/               快速上手指南、常見問題
 - **快速上手**：[docs/getting-started.md](docs/getting-started.md)
 - **常見問題**：[docs/faq.md](docs/faq.md)
 - **框架規範**：[context/framework/agent-role-repo-framework-v2.md](context/framework/agent-role-repo-framework-v2.md)
-- **範例參考**：[context/examples/](context/examples/)
+- **角色原型**：[context/archetypes/](context/archetypes/)
 - **完整指令**：[AGENTS.md](AGENTS.md)（Coding Agent 入口）

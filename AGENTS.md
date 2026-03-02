@@ -44,7 +44,7 @@
 | `.ai/knowledge/` | 核心知識（規範、術語、經驗法則）| 所有產出都必須符合此處規範 |
 | `.ai/interfaces/` | 跨 Repo 介面（exports/imports）| 與其他 Repo 協作時 |
 | `.ai/memory/` | 決策記錄與經驗教訓 | 遇到類似情境時參考 |
-| `context/` | 大量原始參考資料（Framework v2 完整版、範例）| 需要深入背景時 |
+| `context/` | 大量原始參考資料（Framework v2 完整版、角色原型）| 需要深入背景時 |
 | `templates/` | 空白模板（.tmpl 格式）| role-bootstrap 執行時使用 |
 | `tools/` | 輔助腳本（scaffold.sh, validate-repo.sh）| 自動化驗證時 |
 
@@ -92,7 +92,7 @@
 
 1. **先讀規範**：`context/framework/agent-role-repo-framework-v2.md` — 了解完整框架規範
 2. **用模板**：`templates/` 下有各類型的 `.tmpl` 檔案 — 作為產出的基礎結構
-3. **看範例**：`context/examples/` 下有已鍛造的角色範例 — 作為品質對照
+3. **查原型**：`context/archetypes/` 下有各角色的預設值與引導問題 — 加速鑫造流程
 4. **自我驗證**：完成後建議用 `repo-healthcheck` Skill 驗證產出品質
 
 **本 Repo 是 Framework v2 的活示範**：每次鍛造任務的產出，都應該能讓使用者感受到框架的價值。

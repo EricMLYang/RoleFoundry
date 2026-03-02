@@ -1,0 +1,57 @@
+# _registry.yaml — 協作參與者註冊表
+# 每個加入協作的角色 Repo 在此登記
+# 用途：讓任何角色快速查到「誰能幫我做什麼」
+
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+# ============================================================
+# 以下為範例角色，展示 registry 的使用方式
+# 實際使用時替換為真實的角色 Repo 資訊
+# ============================================================
+
+participants:
+  - alias: "architect"
+    name: "架構師"
+    icon: "🏗️"
+    repo_path: "../architect-expert"
+    exports_ref: ".ai/interfaces/exports.yaml"
+    status: active                    # active | inactive | deprecated
+    can_handle:
+      - alias: "arch-review"
+        description: "從擴展性、一致性、維護成本審查技術方案"
+      - alias: "tech-selection"
+        description: "產出結構化 Trade-off 分析報告"
+      - alias: "adr-write"
+        description: "撰寫 Architecture Decision Record"
+    preferred_collab_style: "先給結論再展開推理"
+
+  - alias: "pm"
+    name: "產品經理"
+    icon: "📋"
+    repo_path: "../pm-expert"
+    exports_ref: ".ai/interfaces/exports.yaml"
+    status: active
+    can_handle:
+      - alias: "prd-write"
+        description: "撰寫 Product Requirements Document"
+      - alias: "story-breakdown"
+        description: "將 PRD 拆解為 User Stories + Acceptance Criteria"
+      - alias: "priority-analysis"
+        description: "需求衝突時產出優先順序矩陣"
+    preferred_collab_style: "使用者視角優先，搭配業務指標佐證"
+
+  - alias: "qa"
+    name: "品質工程師"
+    icon: "🧪"
+    repo_path: "../qa-expert"
+    exports_ref: ".ai/interfaces/exports.yaml"
+    status: active
+    can_handle:
+      - alias: "test-strategy"
+        description: "制定測試策略文件"
+      - alias: "test-case-gen"
+        description: "從 User Story 產出測試案例（含邊界條件）"
+      - alias: "bug-analysis"
+        description: "根因分析 + 重現步驟 + 修復建議"
+    preferred_collab_style: "提供具體場景和數據，避免抽象描述"

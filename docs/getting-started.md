@@ -147,8 +147,9 @@ exit 0 = 10 個必要檔案全部存在；exit 1 = 有缺失。
 
 ---
 
-## 範例參考
+## 角色原型參考
 
-- [架構師範例](../context/examples/architect-example/) — Expert Repo 完整示範
-- [PM 範例](../context/examples/pm-example/) — 另一個 Expert Repo 示範
-- [VMS 領域專家](../context/examples/domain-expert-example/) — 有領域背景的 Expert Repo
+- [PM 原型](../context/archetypes/pm/) — 產品經理預設值與引導問題
+- [架構師原型](../context/archetypes/architect/) — 系統架構師預設值與引導問題
+- [領域專家原型](../context/archetypes/domain-expert/) — 領域專家預設值與引導問題
+- [考試輔助師原型](../context/archetypes/exam-tutor/) — 考試輔助師預設值與引導問題
