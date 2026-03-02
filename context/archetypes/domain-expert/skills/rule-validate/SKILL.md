@@ -1,15 +1,16 @@
-# Skill: rule-validate — 規則驗證
-
+---
+name: rule-validate
+description: Validate system implementation against business rules. Use when user says "這個實作符合業務規則嗎" or "幫我檢查這段邏輯對不對".
 ---
 
-## 用途（Purpose）
+# Skill: rule-validate — 規則驗證
+
+## 用途(Purpose)
 
 當需要驗證系統實作是否正確反映業務規則時使用。
 
-- **輸入**：系統實作（程式碼、流程、設定）+ 對應的業務規則
-- **輸出**：驗證報告（一致/不一致項目 + 修正建議）
-
----
+- **輸入**:系統實作(程式碼、流程、設定)+ 對應的業務規則
+- **輸出**:驗證報告(一致/不一致項目 + 修正建議)
 
 ## 何時使用（When to Use）
 

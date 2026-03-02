@@ -1,15 +1,16 @@
+---
+name: tech-select
+description: Structured technology selection analysis. Use when user says "應該用什麼技術" or "A 和 B 哪個更適合".
+---
+
 # Skill: tech-select — 技術選型
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+當需要選擇技術、框架或工具時,執行結構化的選型分析。
 
-當需要選擇技術、框架或工具時，執行結構化的選型分析。
-
-- **輸入**：需求描述 + 約束條件
-- **輸出**：選型報告（候選方案比較 + 建議 + Trade-off）
-
----
+- **輸入**:需求描述 + 約束條件
+- **輸出**:選型報告(候選方案比較 + 建議 + Trade-off)
 
 ## 何時使用（When to Use）
 

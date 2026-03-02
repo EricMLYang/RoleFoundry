@@ -1,15 +1,16 @@
+---
+name: progress-track
+description: Aggregate practice data to generate progress report. Use when user says "我的進度如何" or "弱點在哪裡".
+---
+
 # Skill: progress-track — 進度追蹤
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+匯總學習者的練習數據,產出進度報告和弱點雷達。
 
-匯總學習者的練習數據，產出進度報告和弱點雷達。
-
-- **輸入**：練習記錄（自動從模擬考和練習中收集）
-- **輸出**：進度報告（含正確率趨勢、弱點雷達、覆蓋率）
-
----
+- **輸入**:練習記錄(自動從模擬考和練習中收集)
+- **輸出**:進度報告(含正確率走勢、弱點雷達、覆蓋率)
 
 ## 何時使用（When to Use）
 

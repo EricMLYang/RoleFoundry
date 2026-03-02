@@ -1,8 +1,9 @@
-# Skill: copilot-sync — Copilot 橋接同步
-
-> **橋接維護技能**：確保 `copilot-instructions.md` 與 `AGENTS.md` 的必要資訊保持同步，避免資訊落差。
-
 ---
+name: copilot-sync
+description: Sync AGENTS.md changes to copilot-instructions.md. Use when user says "AGENTS.md 有修改,幫我確認 copilot-instructions.md", "確認橋接同步狀態", or after role-bootstrap.
+---
+
+# Skill: copilot-sync — Copilot 橋接同步
 
 ## 用途（Purpose）
 
@@ -10,8 +11,6 @@
 
 - **輸入**：已更新的 `AGENTS.md` 或使用者指示「確認同步狀態」
 - **輸出**：已驗證或已更新的 `copilot-instructions.md`，附同步差異報告
-
----
 
 ## 何時使用（When to Use）
 

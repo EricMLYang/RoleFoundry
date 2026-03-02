@@ -1,6 +1,9 @@
-# Skill: role-add — 輔助角色新增
-
 ---
+name: role-add
+description: Add a lite agent to an existing role repo. Use when user says "幫我新增一個輔助角色", "這個 Repo 需要一個 [角色名] 來協助", "加一個 [角色] agent", or "我需要一個 [角色描述] 的輔助角色".
+---
+
+# Skill: role-add — 輔助角色新增
 
 ## 用途（Purpose）
 
@@ -9,8 +12,6 @@
 
 - **輸入**：輔助角色描述 + 與主角色的關係
 - **輸出**：Agent 檔案 + 專屬技能 + AGENTS.md 更新 + 橋接同步
-
----
 
 ## 何時使用（When to Use）
 

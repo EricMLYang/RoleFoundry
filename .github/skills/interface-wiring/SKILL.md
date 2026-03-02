@@ -1,15 +1,16 @@
+---
+name: interface-wiring
+description: Establish or update collaboration interfaces between two repos. Use when user says "幫我把 [Expert Repo] 的 [skill-name] 注入到 [Project Repo]", "建立 [角色 A] 和 [角色 B] 之間的介面", or "更新 [Repo] 的 imports.yaml".
+---
+
 # Skill: interface-wiring — 跨 Repo 介面配線
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+在兩個 Repo 之間建立或更新協作介面,確保 exports/imports 對齊,並產生或更新 injection lite 版。
 
-在兩個 Repo 之間建立或更新協作介面，確保 exports/imports 對齊，並產生或更新 injection lite 版。
-
-- **輸入**：來源 Expert Repo 路徑 + 目標 Repo 路徑（或描述）
-- **輸出**：更新後的 exports/imports 定義 + lite 版注入檔
-
----
+- **輸入**:來源 Expert Repo 路徑 + 目標 Repo 路徑(或描述)
+- **輸出**:更新後的 exports/imports 定義 + lite 版注入檔
 
 ## 何時使用（When to Use）
 

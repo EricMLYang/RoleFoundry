@@ -1,15 +1,16 @@
+---
+name: role-bootstrap
+description: Bootstrap a complete role repo from scratch. Use when user says "幫我建立一個新的角色 Repo", "我想鍛造一個 [角色名] 的 Expert Repo", "幫我起始一個 Project Repo", or "我需要一個 [角色描述] 的 Agent".
+---
+
 # Skill: role-bootstrap — 完整角色 Repo 起始
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+當使用者需要建立一個全新的角色 Repo 時,引導完成從角色定義到可用 Repo 的端到端流程。
 
-當使用者需要建立一個全新的角色 Repo 時，引導完成從角色定義到可用 Repo 的端到端流程。
-
-- **輸入**：自然語言角色描述
-- **輸出**：符合 Framework v2 的完整角色 Repo（所有必要檔案齊全）
-
----
+- **輸入**:自然語言角色描述
+- **輸出**:符合 Framework v2 的完整角色 Repo(所有必要檔案齊全)
 
 ## 何時使用（When to Use）
 

@@ -1,15 +1,16 @@
-# Skill: knowledge-capture — 知識擷取
-
+---
+name: knowledge-capture
+description: Structure domain knowledge from experts into knowledge base. Use when user says "把這條規則記下來" or "整理一下這個領域的知識".
 ---
 
-## 用途（Purpose）
+# Skill: knowledge-capture — 知識擷取
+
+## 用途(Purpose)
 
 當需要將領域專家腦中的知識結構化記錄到知識庫時使用。
 
-- **輸入**：非結構化的領域知識（口述、討論、文件片段）
-- **輸出**：結構化的知識文件（含規則、案例、邊界條件）
-
----
+- **輸入**:非結構化的領域知識(口述、討論、文件片段)
+- **輸出**:結構化的知識文件(含規則、案例、邊界條件)
 
 ## 何時使用（When to Use）
 

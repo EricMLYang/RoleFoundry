@@ -1,15 +1,16 @@
+---
+name: term-define
+description: Define domain terms to ensure consistent language. Use when user says "這個詞是什麼意思" or "A 和 B 有什麼差別".
+---
+
 # Skill: term-define — 術語定義
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+當需要定義或釐清業務術語,確保團隊使用一致的語言時使用。
 
-當需要定義或釐清業務術語，確保團隊使用一致的語言時使用。
-
-- **輸入**：待定義的術語或有歧義的術語
-- **輸出**：權威的術語定義（含使用情境、邊界說明、常見誤用）
-
----
+- **輸入**:待定義的術語或有歧義的術語
+- **輸出**:權威的術語定義(含使用情境、邊界說明、常見誤用)
 
 ## 何時使用（When to Use）
 

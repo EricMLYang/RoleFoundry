@@ -1,15 +1,16 @@
-# Skill: question-generate — 題目生成
-
+---
+name: question-generate
+description: Generate exam questions based on topics and difficulty. Use when user says "出幾題 [主題] 的練習題" or "產生一份 [難度] 的測驗".
 ---
 
-## 用途（Purpose）
+# Skill: question-generate — 題目生成
+
+## 用途(Purpose)
 
 根據指定的知識點、難度和題型產生測驗題目。
 
-- **輸入**：知識點範圍 + 難度 + 題數 + 題型
-- **輸出**：測驗題目（含答案和解析）
-
----
+- **輸入**:知識點範圍 + 難度 + 題數 + 題型
+- **輸出**:測驗題目(含答案和解析)
 
 ## 何時使用（When to Use）
 

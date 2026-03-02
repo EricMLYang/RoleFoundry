@@ -1,15 +1,16 @@
+---
+name: weakness-analyze
+description: Analyze practice records to identify knowledge gaps. Use when user says "我哪裡比較弱" or "分析一下我的練習記錄".
+---
+
 # Skill: weakness-analyze — 弱點分析
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+分析學習者的練習記錄,識別知識弱點並產出針對性的補強計畫。
 
-分析學習者的練習記錄，識別知識弱點並產出針對性的補強計畫。
-
-- **輸入**：練習記錄（答題結果、錯題）
-- **輸出**：弱點報告 + 補強建議
-
----
+- **輸入**:練習記錄(答題結果、錯題)
+- **輸出**:弱點報告 + 補強建議
 
 ## 何時使用（When to Use）
 

@@ -1,15 +1,16 @@
+---
+name: arch-review
+description: Structured architecture review. Use when user says "幫我 review 這個架構" or "這個方案技術上可行嗎".
+---
+
 # Skill: arch-review — 架構審查
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+當收到新功能需求或技術方案時,執行結構化的架構審查。
 
-當收到新功能需求或技術方案時，執行結構化的架構審查。
-
-- **輸入**：技術方案文件或功能需求
-- **輸出**：審查報告（風險、Trade-off、建議）
-
----
+- **輸入**:技術方案文件或功能需求
+- **輸出**:審查報告(風險、Trade-off、建議)
 
 ## 何時使用（When to Use）
 

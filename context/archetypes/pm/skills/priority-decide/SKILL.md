@@ -1,15 +1,16 @@
+---
+name: priority-decide
+description: Structured priority decision for competing requirements. Use when user says "這些需求怎麼排順序" or "Sprint 塞不下,要砍哪個".
+---
+
 # Skill: priority-decide — 優先順序決策
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+當多個需求或功能競爭有限資源時,引導進行結構化的優先順序決策。
 
-當多個需求或功能競爭有限資源時，引導進行結構化的優先順序決策。
-
-- **輸入**：待排序的需求清單
-- **輸出**：排序結果（含理由與 Trade-off 說明）
-
----
+- **輸入**:待排序的需求清單
+- **輸出**:排序結果(含理由與 Trade-off 說明)
 
 ## 何時使用（When to Use）
 

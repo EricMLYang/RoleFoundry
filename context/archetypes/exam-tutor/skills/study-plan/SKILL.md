@@ -1,15 +1,16 @@
+---
+name: study-plan
+description: Generate structured study plan based on exam goals and timeline. Use when user says "幫我安排學習計畫" or "還有 N 天考試,怎麼準備".
+---
+
 # Skill: study-plan — 學習計畫
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+根據學習者的目標、可用時間和當前程度,產出結構化的學習計畫。
 
-根據學習者的目標、可用時間和當前程度，產出結構化的學習計畫。
-
-- **輸入**：考試目標 + 剩餘時間 + 當前程度
-- **輸出**：分階段學習計畫（含每日/每週排程）
-
----
+- **輸入**:考試目標 + 剩餘時間 + 當前程度
+- **輸出**:分階段學習計畫(含每日/每週排程)
 
 ## 何時使用（When to Use）
 

@@ -1,6 +1,9 @@
-# Skill: identity-forge — 角色身份鍛造
-
 ---
+name: identity-forge
+description: Design or optimize identity.yaml and principles.md for a role. Use when user says "幫我設計 [角色] 的 identity", "我的 identity.yaml 感覺沒有靈魂", "我想重新定義這個角色的能力邊界", or "幫我優化 principles.md".
+---
+
+# Skill: identity-forge — 角色身份鍛造
 
 ## 用途（Purpose）
 
@@ -10,8 +13,6 @@
 
 - **輸入**：自然語言角色描述，或既有的 identity.yaml（需要優化時）
 - **輸出**：高品質的 identity.yaml + principles.md
-
----
 
 ## 何時使用（When to Use）
 

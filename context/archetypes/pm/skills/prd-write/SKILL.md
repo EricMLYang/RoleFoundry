@@ -1,15 +1,16 @@
+---
+name: prd-write
+description: Write structured Product Requirements Document. Use when user says "幫我寫一份 PRD" or "這個功能的需求文件".
+---
+
 # Skill: prd-write — PRD 撰寫
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+當需要為一個功能或專案撰寫產品需求文件(PRD)時,引導完成結構化撰寫流程。
 
-當需要為一個功能或專案撰寫產品需求文件（PRD）時，引導完成結構化撰寫流程。
-
-- **輸入**：功能描述或需求概要
-- **輸出**：完整 PRD（含 User Story、Acceptance Criteria、成功指標）
-
----
+- **輸入**:功能描述或需求概要
+- **輸出**:完整 PRD(含 User Story、Acceptance Criteria、成功指標)
 
 ## 何時使用（When to Use）
 

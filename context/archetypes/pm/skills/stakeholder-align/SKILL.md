@@ -1,15 +1,16 @@
-# Skill: stakeholder-align — 利害關係人對齊
-
+---
+name: stakeholder-align
+description: Align stakeholder expectations and resolve conflicts. Use when user says "這個決策各方有不同意見" or "需要對齊利害關係人的期望".
 ---
 
-## 用途（Purpose）
+# Skill: stakeholder-align — 利害關係人對齊
+
+## 用途(Purpose)
 
 當需要對齊各方期望、解決利害關係人之間的衝突或取得共識時使用。
 
-- **輸入**：決策議題 + 相關利害關係人
-- **輸出**：利害關係人分析 + 對齊方案 + 溝通計畫
-
----
+- **輸入**:決策議題 + 相關利害關係人
+- **輸出**:利害關係人分析 + 對齊方案 + 溝通計畫
 
 ## 何時使用（When to Use）
 

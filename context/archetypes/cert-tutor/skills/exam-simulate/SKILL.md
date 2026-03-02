@@ -1,15 +1,16 @@
+---
+name: exam-simulate
+description: Simulate real IT certification exam environment. Use when user says "模擬考" or "考考我".
+---
+
 # Skill: exam-simulate — 模擬測驗
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+模擬真實 IT 認證考試環境,按難度分佈和主題範圍出題。
 
-模擬真實 IT 認證考試環境，按難度分佈和主題範圍出題。
-
-- **輸入**：題數 + 主題範圍（可選）+ 難度偏好（可選）
-- **輸出**：模擬考卷 + 即時評分 + 錯題分析
-
----
+- **輸入**:題數 + 主題範圍(可選)+ 難度偏好(可選)
+- **輸出**:模擬考卷 + 即時評分 + 錯題分析
 
 ## 何時使用（When to Use）
 

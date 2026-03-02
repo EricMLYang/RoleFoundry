@@ -1,15 +1,16 @@
+---
+name: repo-healthcheck
+description: Scan a role repo for structure completeness and quality issues. Use when user says "幫我檢查這個 Repo 的健康狀況", "這個 Repo 有符合 Framework v2 規範嗎", or after role-bootstrap to validate quality.
+---
+
 # Skill: repo-healthcheck — Repo 健康檢查
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+掃描一個角色 Repo 的結構完整性與品質,產出健康報告與改善建議清單。
 
-掃描一個角色 Repo 的結構完整性與品質，產出健康報告與改善建議清單。
-
-- **輸入**：目標 Repo 的路徑（可以是當前 Repo 自身，或指定路徑）
-- **輸出**：結構化健康報告，含 5 個維度的評分與具體改善建議
-
----
+- **輸入**:目標 Repo 的路徑(可以是當前 Repo 自身,或指定路徑)
+- **輸出**:結構化健康報告,含 5 個維度的評分與具體改善建議
 
 ## 何時使用（When to Use）
 

@@ -1,6 +1,9 @@
-# Skill: skill-expand — 技能擴充
-
 ---
+name: skill-expand
+description: Convert a recurring task into a usable skill. Use when user says "幫我把 [某工作流程] 固化成一個技能", "我發現每次做 [某任務] 步驟都一樣", "這個 Repo 缺少 [某類型] 的技能", or "我想讓這個 Agent 學會 [某能力]".
+---
+
+# Skill: skill-expand — 技能擴充
 
 ## 用途（Purpose）
 
@@ -8,8 +11,6 @@
 
 - **輸入**：一個重複出現的任務場景描述（可以很粗略）
 - **輸出**：完整的 Skill 目錄（SKILL.md + checklist.md + changelog.md + examples/）
-
----
 
 ## 何時使用（When to Use）
 
@@ -58,24 +59,52 @@
 
 ### Step 3: 撰寫 SKILL.md [autonomous]
 
-按以下 6 段落格式完整撰寫：
+**必須遵循 Agent Skills 開放標準格式**，包含 YAML Frontmatter + Markdown Body：
 
-```
+```markdown
+---
+name: <alias>
+description: <功能描述與觸發條件，1-2 句話說明用途和何時使用，最多 1024 字元>
+---
+
 # Skill: <alias> — <中文名稱>
 
 ## 用途（Purpose）
+<1-2 句話說明解決什麼問題，明確說明輸入和輸出>
+
 ## 何時使用（When to Use）
+<至少 2 個具體觸發句，使用者真實說的話>
+
 ## 前置條件（Prerequisites）
+<執行前需要什麼才能開始>
+
 ## 流程（Process）
-  ### Step N: <步驟名> [執行模式]
+
+### Step 1: <步驟名> [interactive/autonomous/hybrid]
+<步驟詳細說明>
+
+### Step 2: <步驟名> [interactive/autonomous/hybrid]
+<步驟詳細說明>
+
+...
+
 ## 品質標準（Quality Gates）
+<可客觀判斷的通過條件>
+
 ## 已知限制（Limitations）
+<誠實說明這個技能做不到什麼>
 ```
 
-**注意**：
+**YAML Frontmatter 規範**：
+- **name** (必填)：長度 1-64 字元，僅限小寫英文、數字與連字號，必須與資料夾名稱完全相同
+- **description** (必填)：最多 1024 字元，必須包含「技能用途」和「觸發條件」，Agent 完全依賴此欄位判斷是否啟動技能
+
+**Markdown Body 注意事項**：
 - 每個步驟的觸發條件描述不超過 25 字
 - 使用角色自身的語言和風格（不是 RoleFoundry 的語言）
 - 步驟間的依賴關係要明確
+- 流程步驟不超過 7 個（超過考慮拆分為兩個 Skill）
+- 每個步驟的標題用動詞開頭（「收集需求」而非「需求」）
 
 ### Step 4: 建立支援檔案 [autonomous]
 
@@ -103,9 +132,12 @@
 
 ## 品質標準（Quality Gates）
 
-- SKILL.md 包含完整 6 段落格式
+- SKILL.md 頂部必須有 YAML Frontmatter（`---` 包圍的 name 和 description）
+- name 欄位與資料夾名稱完全一致
+- description 包含觸發條件關鍵字，不超過 1024 字元
+- SKILL.md 包含完整 6 段落格式（用途、何時使用、前置條件、流程、品質標準、已知限制）
 - 觸發條件（trigger）一句話說清楚，不超過 25 字
-- 步驟數量在 3-6 個之間
+- 步驟數量在 3-7 個之間
 - 每個步驟有明確的執行模式標記（interactive/autonomous/hybrid）
 - _index.yaml 已更新，新技能可被正確觸發
 

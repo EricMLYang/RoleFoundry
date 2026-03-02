@@ -1,15 +1,16 @@
-# Skill: topic-explain — 考點解析
-
+---
+name: topic-explain
+description: Deep analysis of IT certification exam topics. Use when user says "解析這題" or "為什麼答案是 A".
 ---
 
-## 用途（Purpose）
+# Skill: topic-explain — 考點解析
+
+## 用途(Purpose)
 
 對 IT 認證考試的特定考點或題目進行深度解析。
 
-- **輸入**：題目或考點主題
-- **輸出**：五要素深度解析（考點識別 + 正解 + 排除 + 記憶法 + 參考）
-
----
+- **輸入**:題目或考點主題
+- **輸出**:五要素深度解析(考點識別 + 正解 + 排除 + 記憶法 + 參考)
 
 ## 何時使用（When to Use）
 

@@ -1,15 +1,16 @@
+---
+name: interface-design
+description: Design interfaces between components or services. Use when user says "設計這兩個服務之間的介面" or "定義這個 API 的規格".
+---
+
 # Skill: interface-design — 介面設計
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+當需要設計跨組件或跨服務的介面時,產出結構化的介面規範。
 
-當需要設計跨組件或跨服務的介面時，產出結構化的介面規範。
-
-- **輸入**：協作需求（哪些組件需要溝通、資料流向）
-- **輸出**：API Contract / 介面規範文件
-
----
+- **輸入**:協作需求(哪些組件需要溝通、資料流向)
+- **輸出**:API Contract / 介面規範文件
 
 ## 何時使用（When to Use）
 

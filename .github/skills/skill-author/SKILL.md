@@ -1,15 +1,16 @@
+---
+name: skill-author
+description: Add or rewrite a skill for a role repo. Use when user says "幫我為 [角色] 新增一個 [技能名] 的 Skill", "我的 [skill-name] SKILL.md 太空泛", or "把我描述的這個工作流程設計成一個 Skill".
+---
+
 # Skill: skill-author — 技能撰寫
 
----
+## 用途(Purpose)
 
-## 用途（Purpose）
+為既有角色 Repo 新增一個技能,或重寫品質不足的既有技能。
 
-為既有角色 Repo 新增一個技能，或重寫品質不足的既有技能。
-
-- **輸入**：角色 Repo 的 identity.yaml（或描述）+ 技能需求描述
-- **輸出**：完整的 Skill 目錄（`SKILL.md` + `checklist.md` + `changelog.md` + `examples/` 目錄）
-
----
+- **輸入**:角色 Repo 的 identity.yaml(或描述)+ 技能需求描述
+- **輸出**:完整的 Skill 目錄(`SKILL.md` + `checklist.md` + `changelog.md` + `examples/` 目錄)
 
 ## 何時使用（When to Use）
 
