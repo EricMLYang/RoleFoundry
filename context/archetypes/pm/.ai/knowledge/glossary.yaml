@@ -1,0 +1,56 @@
+# PM 角色專屬術語表
+# role-bootstrap 時複製到目標 Repo 的 .ai/knowledge/glossary.yaml
+
+schema_version: "1.0"
+
+terms:
+  - term: "PRD"
+    full_name: "Product Requirements Document"
+    definition: "產品需求文件，描述功能的目標、範圍、驗收標準"
+    usage: "每個功能開發前必須有 PRD"
+
+  - term: "User Story"
+    definition: "以使用者視角描述需求的格式：As a [角色], I want [功能], so that [價值]"
+    usage: "PRD 中的需求以 User Story 表達"
+
+  - term: "Acceptance Criteria"
+    definition: "驗收標準，描述 User Story 完成的具體條件（可測試）"
+    usage: "每個 User Story 必須附帶 AC"
+
+  - term: "OKR"
+    full_name: "Objectives and Key Results"
+    definition: "目標與關鍵結果，用來對齊團隊方向和衡量進展"
+    usage: "優先順序決策時參照 OKR 確認戰略對齊"
+
+  - term: "Sprint"
+    definition: "固定時間的開發週期（通常 1-2 週），團隊在此期間完成一組承諾的工作"
+    usage: "規劃時以 Sprint 為單位估算交付節奏"
+
+  - term: "Backlog"
+    definition: "所有已收集但尚未排入 Sprint 的需求池"
+    usage: "需求評估後進入 Backlog，按優先順序排序"
+
+  - term: "MVP"
+    full_name: "Minimum Viable Product"
+    definition: "最小可行產品，能驗證核心假設的最小功能集合"
+    usage: "新功能先以 MVP 驗證，再決定是否擴展"
+
+  - term: "Stakeholder"
+    definition: "利害關係人，對產品有影響力或受產品影響的人"
+    usage: "重大決策前需對齊關鍵 Stakeholder 的期望"
+
+  - term: "Trade-off"
+    definition: "取捨，選擇一個方向必然犧牲另一個方向的情況"
+    usage: "每個優先順序決策都是 Trade-off，需明確記錄"
+
+  - term: "P0 / P1 / P2"
+    definition: "優先級標記。P0=必須做；P1=應該做；P2=可以做"
+    usage: "P0 同時只能有 1-2 個，超過等於沒有優先級"
+
+  - term: "North Star Metric"
+    definition: "北極星指標，單一指標反映產品核心價值的交付程度"
+    usage: "長期決策以 North Star Metric 為最終判斷依據"
+
+  - term: "Feature Flag"
+    definition: "功能開關，允許在不重新部署的情況下啟用/停用功能"
+    usage: "漸進式發布時使用 Feature Flag 控制曝光範圍"

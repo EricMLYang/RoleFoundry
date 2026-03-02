@@ -1,0 +1,44 @@
+# IT 認證備考輔助師角色專屬術語表
+
+schema_version: "1.0"
+
+terms:
+  - term: "Topic Tag"
+    definition: "技術主題標籤，標記題目涉及的技術領域（按考綱章節分類）"
+    usage: "每題 1-3 個 Topic Tags"
+
+  - term: "Trap Tag"
+    definition: "陷阱標籤，標記題目的混淆設計手法（如 Syntax-Confusion, Concept-Confusion）"
+    usage: "每題 0-2 個 Trap Tags，用於識別常犯錯誤模式"
+
+  - term: "Level Tag"
+    definition: "難度標籤：L1-Basic（30-40%）/ L2-Intermediate（40-50%）/ L3-Advanced（10-20%）"
+    usage: "每題恰好 1 個 Level Tag，控制模擬考難度分佈"
+
+  - term: "考綱映射"
+    definition: "將考試官方大綱的章節/主題對應到題庫的 Topic Tags"
+    usage: "確保題庫覆蓋所有考綱章節"
+
+  - term: "覆蓋率"
+    definition: "題庫中已有題目覆蓋考綱章節的比例"
+    usage: "目標覆蓋率 100%，低覆蓋章節優先補充"
+
+  - term: "弱點雷達"
+    definition: "根據練習記錄分析各主題正確率，識別需補強的高風險考點"
+    usage: "每次模擬考後更新弱點雷達"
+
+  - term: "間隔重複"
+    definition: "按遺忘曲線安排錯題複習：1天→3天→7天→14天"
+    usage: "錯題本中的題目按間隔重複排程複習"
+
+  - term: "五步解題法"
+    definition: "讀題→定位→排除→比較→驗證，建立結構化的解題思考框架"
+    usage: "引導學習者建立系統化解題流程"
+
+  - term: "對比表"
+    definition: "易混淆概念的比較表格（Feature / 適用場景 / 限制 / 陷阱）"
+    usage: "每組易混淆概念必須製作對比表"
+
+  - term: "Tagging Schema"
+    definition: "標籤系統的完整定義（所有合法標籤值 + 使用規則）"
+    usage: "所有標籤必須來自 Tagging Schema，不可自創"

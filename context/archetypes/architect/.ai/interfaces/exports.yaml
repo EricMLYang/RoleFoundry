@@ -1,0 +1,16 @@
+# exports.yaml — architect 對外提供的能力介面
+
+exports:
+  skills:
+    - alias: "arch-review"
+      description: "架構審查服務，評估方案的可行性與風險"
+      stability: experimental
+
+    - alias: "interface-design"
+      description: "跨組件介面設計與規範產出"
+      stability: experimental
+
+  knowledge:
+    - type: "standards"
+      path: "knowledge/glossary.yaml"
+      description: "架構相關核心術語定義"

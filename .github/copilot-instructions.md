@@ -19,6 +19,7 @@
 | alias | 觸發條件 | 模式 |
 |-------|---------|------|
 | `role-bootstrap` | 建立全新角色 Repo 時 | interactive |
+| `role-add` | 為既有 Repo 新增輔助角色時 | interactive |
 | `identity-forge` | 定義或優化角色身份時 | interactive |
 | `skill-author` | 新增或重寫角色技能時 | hybrid |
 | `repo-healthcheck` | 評估 Repo 品質與完整性時 | autonomous |

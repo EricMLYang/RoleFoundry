@@ -1,0 +1,16 @@
+# exports.yaml — exam-tutor 對外提供的能力介面
+
+exports:
+  skills:
+    - alias: "question-generate"
+      description: "根據知識點和難度產生測驗題目"
+      stability: experimental
+
+    - alias: "weakness-analyze"
+      description: "分析學習者的弱點並產出補強建議"
+      stability: experimental
+
+  knowledge:
+    - type: "reference"
+      path: "knowledge/glossary.yaml"
+      description: "教學相關術語定義"

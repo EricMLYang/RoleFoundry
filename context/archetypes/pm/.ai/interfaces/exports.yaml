@@ -1,0 +1,22 @@
+# exports.yaml — pm 對外提供的能力介面
+# 一旦其他 Repo 開始 import，這裡的定義就是承諾，不能任意修改
+
+exports:
+  skills:
+    - alias: "prd-write"
+      description: "產生符合團隊標準的 PRD 文件"
+      stability: experimental
+
+    - alias: "priority-decide"
+      description: "基於框架的優先順序決策輸出"
+      stability: experimental
+
+  knowledge:
+    - type: "standards"
+      path: "knowledge/glossary.yaml"
+      description: "產品管理核心術語定義"
+
+  prompts:
+    - alias: "requirement-template"
+      path: "prompts/requirement-template.prompt.md"
+      description: "需求撰寫模板（含 User Story + AC 格式）"

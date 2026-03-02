@@ -1,0 +1,20 @@
+# exports.yaml — domain-expert 對外提供的能力介面
+
+exports:
+  skills:
+    - alias: "rule-validate"
+      description: "驗證系統實作是否符合業務規則"
+      stability: experimental
+
+    - alias: "term-define"
+      description: "業務術語的權威定義服務"
+      stability: experimental
+
+  knowledge:
+    - type: "reference"
+      path: "knowledge/glossary.yaml"
+      description: "領域專屬術語定義"
+
+    - type: "standards"
+      path: "knowledge/business-rules/"
+      description: "業務規則文件集"

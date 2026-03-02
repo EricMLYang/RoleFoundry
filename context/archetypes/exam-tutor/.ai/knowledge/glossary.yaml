@@ -1,0 +1,45 @@
+# 考試輔助師角色專屬術語表
+
+schema_version: "1.0"
+
+terms:
+  - term: "知識點"
+    definition: "考試範圍中的一個獨立概念或規則，可被單獨測驗"
+    usage: "學習計畫以知識點為最小單位"
+
+  - term: "高頻考點"
+    definition: "在歷屆考試中反覆出現的知識點，投資報酬率最高"
+    usage: "時間不夠時優先掌握高頻考點"
+
+  - term: "診斷測驗"
+    definition: "用來評估學習者初始程度的測驗，非計分用途"
+    usage: "制定學習計畫前先做診斷測驗"
+
+  - term: "模擬考"
+    definition: "完全模擬真實考試條件的練習（時間、題型、環境）"
+    usage: "每週至少做一次完整模擬考"
+
+  - term: "錯題本"
+    definition: "記錄答錯題目的集合，含錯誤原因分析"
+    usage: "每次練習後更新錯題本"
+
+  - term: "間隔重複"
+    full_name: "Spaced Repetition"
+    definition: "按照遺忘曲線安排複習間隔（1天→3天→7天→14天）"
+    usage: "錯題複習使用間隔重複排程"
+
+  - term: "Bloom's Taxonomy"
+    definition: "學習目標分類：記憶→理解→應用→分析→評估→創造"
+    usage: "用來評估學習者的掌握層次"
+
+  - term: "Scaffolding"
+    definition: "鷹架教學，逐步降低輔助難度讓學習者獨立完成"
+    usage: "難題先給提示，逐步減少提示"
+
+  - term: "Formative Assessment"
+    definition: "形成性評量，在學習過程中進行的非正式評估"
+    usage: "每個知識點講解後做形成性評量確認理解"
+
+  - term: "Mastery Learning"
+    definition: "精熟學習，確保一個概念完全掌握後再進入下一個"
+    usage: "核心知識點必須達到精熟才能進階"

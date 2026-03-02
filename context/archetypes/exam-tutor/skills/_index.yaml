@@ -1,0 +1,30 @@
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+skills:
+  - name: "題目生成"
+    alias: "question-generate"
+    trigger: "當需要產生測驗題目或練習題時"
+    description: "根據知識點、難度和題型產生測驗題目"
+    mode: hybrid
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/question-generate/SKILL.md"
+
+  - name: "弱點分析"
+    alias: "weakness-analyze"
+    trigger: "當需要分析學習者的弱點時"
+    description: "分析練習記錄，識別弱點並產出補強計畫"
+    mode: autonomous
+    estimated_effort: low
+    phase: 1
+    path: ".github/skills/weakness-analyze/SKILL.md"
+
+  - name: "學習計畫"
+    alias: "study-plan"
+    trigger: "當需要制定或調整學習計畫時"
+    description: "根據目標、時間和程度產出結構化學習計畫"
+    mode: interactive
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/study-plan/SKILL.md"

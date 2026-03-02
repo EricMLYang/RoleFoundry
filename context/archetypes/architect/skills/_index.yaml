@@ -1,0 +1,30 @@
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+skills:
+  - name: "架構審查"
+    alias: "arch-review"
+    trigger: "當需要審查系統架構或技術方案時"
+    description: "評估架構方案的可行性、Trade-off、風險"
+    mode: hybrid
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/arch-review/SKILL.md"
+
+  - name: "技術選型"
+    alias: "tech-select"
+    trigger: "當需要選擇技術、框架或工具時"
+    description: "基於約束條件的技術選型分析與建議"
+    mode: interactive
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/tech-select/SKILL.md"
+
+  - name: "介面設計"
+    alias: "interface-design"
+    trigger: "當需要設計跨組件或跨服務介面時"
+    description: "產出 API Contract、介面規範、整合方案"
+    mode: hybrid
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/interface-design/SKILL.md"

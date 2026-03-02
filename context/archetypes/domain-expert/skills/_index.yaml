@@ -1,0 +1,30 @@
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+skills:
+  - name: "知識擷取"
+    alias: "knowledge-capture"
+    trigger: "當需要將領域知識結構化記錄時"
+    description: "引導萃取並結構化記錄領域知識到知識庫"
+    mode: interactive
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/knowledge-capture/SKILL.md"
+
+  - name: "規則驗證"
+    alias: "rule-validate"
+    trigger: "當需要驗證實作是否符合業務規則時"
+    description: "逐條比對業務規則與系統實作的一致性"
+    mode: hybrid
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/rule-validate/SKILL.md"
+
+  - name: "術語定義"
+    alias: "term-define"
+    trigger: "當需要定義或釐清業務術語時"
+    description: "產出權威的術語定義，含使用情境和邊界說明"
+    mode: interactive
+    estimated_effort: low
+    phase: 1
+    path: ".github/skills/term-define/SKILL.md"

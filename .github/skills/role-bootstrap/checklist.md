@@ -15,6 +15,9 @@
 
 - [ ] 若有匹配原型，已在 decisions.md 記錄採用了哪個 archetype、客製了哪些欄位
 - [ ] 若無匹配原型，已在 decisions.md 記錄原因
+- [ ] 若 archetype 有預建內容（has_prebuilt: true），seed 檔案已複製到目標 Repo
+- [ ] glossary.yaml 已填入至少 8 條角色專屬術語
+- [ ] 預設技能（skill-expand、copilot-sync）都存在於 .github/skills/
 
 ## 身份品質（identity.yaml）
 

@@ -109,11 +109,11 @@
 
 ## 品質標準（Quality Gates）
 
-- [ ] 技能表與 `_index.yaml` 完全一致（alias、trigger、mode 三欄）？
-- [ ] 角色識別（one_liner、perspective）與 `identity.yaml` 或 `AGENTS.md` 一致？
-- [ ] 「完整版請參閱 AGENTS.md」連結存在？
-- [ ] 橋接檔未引入「只在 AGENTS.md」的詳細內容？
-- [ ] 更新後檔案長度 ≤ 60 行？
+- 技能表與 `_index.yaml` 完全一致（alias、trigger、mode 三欄）
+- 角色識別（one_liner、perspective）與 `identity.yaml` 或 `AGENTS.md` 一致
+- 「完整版請參閱 AGENTS.md」連結存在
+- 橋接檔未引入「只在 AGENTS.md」的詳細內容
+- 更新後檔案長度 ≤ 60 行
 
 ---
 

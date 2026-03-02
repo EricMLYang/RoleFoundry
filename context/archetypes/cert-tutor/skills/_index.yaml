@@ -1,0 +1,30 @@
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+skills:
+  - name: "模擬測驗"
+    alias: "exam-simulate"
+    trigger: "當需要進行模擬考或出題練習時"
+    description: "按難度分佈和主題範圍出題，限時作答，即時評分"
+    mode: interactive
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/exam-simulate/SKILL.md"
+
+  - name: "考點解析"
+    alias: "topic-explain"
+    trigger: "當需要深度解析某個考點或題目時"
+    description: "五要素深度解析：考點識別 + 正解 + 排除 + 記憶法 + 參考"
+    mode: hybrid
+    estimated_effort: low
+    phase: 1
+    path: ".github/skills/topic-explain/SKILL.md"
+
+  - name: "進度追蹤"
+    alias: "progress-track"
+    trigger: "當需要檢視學習進度或調整計畫時"
+    description: "匯總練習數據，產出進度報告和弱點雷達"
+    mode: autonomous
+    estimated_effort: low
+    phase: 1
+    path: ".github/skills/progress-track/SKILL.md"

@@ -1,0 +1,45 @@
+# 領域專家角色專屬術語表
+
+schema_version: "1.0"
+
+terms:
+  - term: "業務規則"
+    definition: "組織運作中必須遵循的規定、政策或邏輯，決定業務行為的正確性"
+    usage: "所有系統實作必須符合已定義的業務規則"
+
+  - term: "邊界案例"
+    definition: "處於規則適用範圍邊緣的情境，容易被忽略或誤判"
+    usage: "每條規則的說明必須涵蓋常見的邊界案例"
+
+  - term: "Domain Model"
+    definition: "領域模型，用結構化方式表達業務概念和它們之間的關係"
+    usage: "系統設計應基於 Domain Model 確保業務語意正確"
+
+  - term: "Ubiquitous Language"
+    definition: "通用語言，團隊中所有人對同一業務概念使用相同的詞彙"
+    usage: "glossary 是建立 Ubiquitous Language 的基礎"
+
+  - term: "Business Process"
+    definition: "業務流程，一系列有順序的活動，將輸入轉換為有價值的輸出"
+    usage: "流程變更需要評估上下游影響"
+
+  - term: "Compliance"
+    definition: "合規性，系統行為符合法律、法規、行業標準的要求"
+    usage: "涉及法規的業務規則變更需要法務確認"
+
+  - term: "SOP"
+    full_name: "Standard Operating Procedure"
+    definition: "標準作業程序，業務流程的詳細步驟文件"
+    usage: "系統實作應反映 SOP 的邏輯"
+
+  - term: "Exception Handling"
+    definition: "例外處理，當正常流程無法執行時的替代方案"
+    usage: "每個業務流程必須定義例外處理方式"
+
+  - term: "Audit Trail"
+    definition: "稽核軌跡，記錄業務操作的歷史，供事後追溯"
+    usage: "涉及金額或權限的操作必須有 Audit Trail"
+
+  - term: "Knowledge Base"
+    definition: "知識庫，結構化儲存領域知識的文件集合"
+    usage: "重要的業務問答結果應歸入知識庫"

@@ -1,0 +1,30 @@
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+skills:
+  - name: "PRD 撰寫"
+    alias: "prd-write"
+    trigger: "當需要撰寫或審查產品需求文件時"
+    description: "引導完成結構化 PRD，含 User Story、AC、成功指標"
+    mode: hybrid
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/prd-write/SKILL.md"
+
+  - name: "優先順序決策"
+    alias: "priority-decide"
+    trigger: "當多個需求競爭資源需要排序時"
+    description: "基於決策框架產出優先順序排序與理由"
+    mode: interactive
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/priority-decide/SKILL.md"
+
+  - name: "利害關係人對齊"
+    alias: "stakeholder-align"
+    trigger: "當需要對齊各方期望或解決衝突時"
+    description: "識別利害關係人、分析立場、產出對齊方案"
+    mode: interactive
+    estimated_effort: medium
+    phase: 2
+    path: ".github/skills/stakeholder-align/SKILL.md"

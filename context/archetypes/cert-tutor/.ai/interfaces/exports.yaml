@@ -1,0 +1,20 @@
+# exports.yaml — cert-tutor 對外提供的能力介面
+
+exports:
+  skills:
+    - alias: "exam-simulate"
+      description: "模擬測驗服務，按難度/主題出題並評分"
+      stability: experimental
+
+    - alias: "topic-explain"
+      description: "IT 認證考點的深度解析服務"
+      stability: experimental
+
+  knowledge:
+    - type: "reference"
+      path: "knowledge/glossary.yaml"
+      description: "IT 認證備考相關術語定義"
+
+    - type: "standards"
+      path: "knowledge/tagging-schema.yaml"
+      description: "題庫標籤系統規範"

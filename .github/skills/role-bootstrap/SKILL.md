@@ -1,7 +1,5 @@
 # Skill: role-bootstrap — 完整角色 Repo 起始
 
-> **旗艦技能**：RoleFoundry 最核心的能力。端到端引導完成一個符合 Framework v2 規範的角色 Repo。
-
 ---
 
 ## 用途（Purpose）
@@ -70,22 +68,34 @@
 
 ### Step 3: 核心檔案產生 [autonomous]
 
-按以下順序產生（後者依賴前者，不可調整順序）：
+**3a. 來源判定**
 
-1. `.ai/identity.yaml` — 角色靈魂，最重要，使用 `templates/identity.yaml.tmpl`
-2. `.ai/principles.md` — 判斷框架，使用 `templates/principles.md.tmpl`
-3. `AGENTS.md` — 核心指令源，使用 `templates/AGENTS.md.tmpl`
-4. `CLAUDE.md` / `GEMINI.md` / `.github/copilot-instructions.md` — 三個橋接檔，使用 `templates/bridge-files/` 下的模板
-5. `.github/skills/_index.yaml` — 技能清單，含觸發條件與模式
-6. 每個初始 Skill 的目錄結構：`SKILL.md`（框架完整版）+ `checklist.md` + `changelog.md` + 空的 `examples/`
-7. `.ai/interfaces/exports.yaml` + `imports.yaml` — 介面定義
-8. `.ai/knowledge/glossary.yaml` — 至少 10 個核心術語
-9. `.ai/memory/decisions.md` — 記錄本次鍛造的關鍵設計決策
-10. **預設技能**（自動包含，不需使用者設定）：
-    讀取 RoleFoundry 的 `templates/_defaults.yaml`，
-    將其中所有預設技能從 `templates/default-skills/` 複製到目標 Repo 的 `.github/skills/`，
-    並將每個預設技能加入 _index.yaml。
-    目前預設技能：skill-expand（技能擴充）
+先檢查 `context/archetypes/_index.yaml` 中匹配的 archetype 是否有 `has_prebuilt: true`：
+
+- **有預建內容**（has_prebuilt: true）→ 走 Seed 複製路徑：
+  1. 從 `context/archetypes/{alias}/.ai/` 複製到目標 `.ai/`
+  2. 從 `context/archetypes/{alias}/skills/` 複製到目標 `.github/skills/`
+  3. 從 `context/archetypes/{alias}/prompts/` 複製到目標 `.github/prompts/`（若存在）
+  4. 根據訪談結果客製化欄位值（替換 identity.yaml 中的具體值、調整 principles.md 內容）
+
+- **無預建內容** → 走原有模板生成流程（使用 `templates/*.tmpl`）
+
+**3b. 產生順序**（來源可能是 seed 複製或模板生成，順序不變）：
+
+1. `.ai/identity.yaml` — 角色靈魂，最重要（seed 或 `templates/identity.yaml.tmpl`）
+2. `.ai/principles.md` — 判斷框架（seed 或 `templates/principles.md.tmpl`）
+3. `.ai/knowledge/glossary.yaml` — 角色專屬術語（seed 或空模板，至少 8 條）
+4. `.ai/interfaces/exports.yaml` + `imports.yaml` — 介面定義（seed 或 `templates/exports.yaml.tmpl`）
+5. `AGENTS.md` — 核心指令源，使用 `templates/AGENTS.md.tmpl` 填入客製值
+6. `CLAUDE.md` / `GEMINI.md` / `.github/copilot-instructions.md` — 三個橋接檔
+7. `.github/skills/_index.yaml` — 合併 archetype skills + default skills
+8. 角色專屬技能（從 archetype `skills/` 複製，或用 `templates/SKILL.md.tmpl` 產生）
+9. **預設技能**（自動包含，不需使用者設定）：
+   讀取 RoleFoundry 的 `context/default-skills/_defaults.yaml`，
+   將其中所有預設技能從 `context/default-skills/` 複製到目標 Repo 的 `.github/skills/`，
+   並將每個預設技能加入 _index.yaml。
+   目前預設技能：skill-expand（技能擴充）、copilot-sync（橋接同步）
+10. `.ai/memory/decisions.md` — 記錄本次鍛造的關鍵設計決策
 
 **注意**：AGENTS.md 必須在 32KB 以內。使用 `see：` 引用而非嵌入大量內容。
 

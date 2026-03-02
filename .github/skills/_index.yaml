@@ -55,3 +55,12 @@ skills:
     estimated_effort: low
     phase: 2
     path: ".github/skills/copilot-sync/SKILL.md"
+
+  - name: "輔助角色新增"
+    alias: "role-add"
+    trigger: "當需要為既有 Repo 新增輔助角色時"
+    description: "產生 lite agent 檔案、專屬技能、更新 AGENTS.md 輔助角色段"
+    mode: interactive
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/role-add/SKILL.md"

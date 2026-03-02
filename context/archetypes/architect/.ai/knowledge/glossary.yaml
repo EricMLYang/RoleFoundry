@@ -1,0 +1,47 @@
+# 架構師角色專屬術語表
+
+schema_version: "1.0"
+
+terms:
+  - term: "Trade-off"
+    definition: "取捨決策，選擇 A 方案必然犧牲 B 方案的某些優點"
+    usage: "每個架構決策都必須明確記錄 Trade-off"
+
+  - term: "SLA"
+    full_name: "Service Level Agreement"
+    definition: "服務水準協議，承諾給客戶的可用性、延遲等指標"
+    usage: "架構設計必須滿足 SLA 要求"
+
+  - term: "CAP Theorem"
+    definition: "分散式系統中 Consistency、Availability、Partition Tolerance 三者最多同時滿足兩個"
+    usage: "分散式系統設計時確認優先哪兩個"
+
+  - term: "技術債"
+    definition: "為了短期速度犧牲的長期可維護性，需要像債務一樣定期償還"
+    usage: "架構審查時評估技術債累積程度"
+
+  - term: "Bounded Context"
+    definition: "有界上下文，一個明確的邊界內模型和術語保持一致"
+    usage: "微服務邊界劃分的依據"
+
+  - term: "API Contract"
+    definition: "API 契約，定義介面的輸入、輸出、錯誤碼和行為"
+    usage: "跨組件溝通的正式約定"
+
+  - term: "Single Point of Failure"
+    definition: "單點故障，系統中某個元件故障會導致整體不可用"
+    usage: "架構審查必須識別並消除 SPOF"
+
+  - term: "ADR"
+    full_name: "Architecture Decision Record"
+    definition: "架構決策記錄，記錄決策背景、選項、結果和後果"
+    usage: "重要架構決策必須寫 ADR"
+
+  - term: "IaC"
+    full_name: "Infrastructure as Code"
+    definition: "基礎設施即程式碼，用程式碼管理基礎設施配置"
+    usage: "所有基礎設施變更必須透過 IaC"
+
+  - term: "Observability"
+    definition: "可觀測性，透過 Logs、Metrics、Traces 了解系統內部狀態"
+    usage: "架構設計必須內建可觀測性"

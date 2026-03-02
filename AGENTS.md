@@ -72,6 +72,7 @@
 | 技能名稱 | alias | 觸發條件 | 模式 |
 |---------|-------|---------|------|
 | 角色 Repo 起始 | `role-bootstrap` | 建立全新角色 Repo 時 | interactive |
+| 輔助角色新增 | `role-add` | 為既有 Repo 新增輔助角色時 | interactive |
 | 角色身份鍛造 | `identity-forge` | 定義或優化角色身份時 | interactive |
 | 技能撰寫 | `skill-author` | 新增或重寫角色技能時 | hybrid |
 | Repo 健康檢查 | `repo-healthcheck` | 評估 Repo 品質時 | autonomous |
