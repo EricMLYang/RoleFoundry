@@ -1,0 +1,11 @@
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+agents:
+  - name: "角色鍛造師 Lite"
+    alias: "foundry-lite"
+    description: "RoleFoundry 的輕量版 Agent，適合快速品質檢查和格式驗證"
+    use_when: "需要快速判斷而不啟動完整 Skill 時"
+    path: ".github/agents/foundry-lite.agent.md"
+    injectable: true
+    injection_source: ".ai/interfaces/injections/foundry-lite.md"

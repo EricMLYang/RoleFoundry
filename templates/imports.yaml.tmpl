@@ -1,0 +1,13 @@
+# imports.yaml — {{ROLE_ALIAS}} 依賴的外部能力
+# 每條依賴必須說明 needs（需要什麼）和 reason（為什麼需要）
+
+imports:
+  - from: "{{SOURCE_REPO_ALIAS}}"
+    needs:
+      - "{{NEEDED_SKILL_OR_KNOWLEDGE}}"
+    reason: "{{WHY_THIS_IS_NEEDED}}"
+    injection_path: ".github/agents/{{SOURCE_REPO_ALIAS}}-lite.md"
+
+# 如果無外部依賴，填寫：
+# imports: []
+# # 說明：本 Repo 自給自足，不依賴外部 Expert Repo

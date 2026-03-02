@@ -1,0 +1,13 @@
+# imports.yaml — RoleFoundry 的外部依賴聲明
+# RoleFoundry 設計為自給自足（ADR-003），不依賴外部 Expert Repo
+
+imports: []
+
+# 說明：
+# RoleFoundry 封裝了 Agent Role Repo Framework v2 的完整知識（見 context/framework/），
+# 以及角色設計所需的所有判斷框架（見 .ai/principles.md 和 .ai/knowledge/）。
+# 目前不依賴任何外部 Expert Repo。
+#
+# 如果未來需要：
+# - 特定領域知識（如 Databricks、AWS 架構）→ 引用對應的領域專家 Expert Repo
+# - 框架版本升級協作 → 引用 framework-governance Repo（如有）

@@ -1,0 +1,111 @@
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+terms:
+  - term: "Expert Repo"
+    zh: "專家 Repo"
+    definition: "以角色為核心的知識容器，封裝特定角色的身份、判斷力與技能，可跨多個專案複用"
+    see_also: ["Project Repo", "identity.yaml", "type: expert"]
+
+  - term: "Project Repo"
+    zh: "專案 Repo"
+    definition: "服務單一專案生命週期的 Repo，整合多個 Expert Repo 的 lite 版來驅動專案交付"
+    see_also: ["Expert Repo", "type: project", "injection"]
+
+  - term: "Skill"
+    zh: "技能"
+    definition: "封裝在 SKILL.md 中的結構化任務指令，包含用途、觸發條件、執行流程、範例與品質檢查"
+    see_also: ["SKILL.md", "checklist.md", "examples/"]
+
+  - term: "SKILL.md"
+    definition: "技能的核心定義文件，必須包含：用途、何時使用、流程（標記執行模式）、品質標準、已知限制"
+    see_also: ["Skill", "checklist.md"]
+
+  - term: "identity.yaml"
+    definition: "角色身份卡，定義角色的視角、語氣、主要能力、能力邊界、品質標準與反模式，是角色 Repo 的靈魂"
+    see_also: ["principles.md", "schema_version"]
+
+  - term: "principles.md"
+    definition: "決策原則文件，用真實兩難情境編碼角色的判斷力，包含核心信念、決策框架與經驗法則"
+    see_also: ["identity.yaml", "heuristics.md"]
+
+  - term: "AGENTS.md"
+    definition: "所有 Coding Agent 的核心指令源，Codex CLI 原生讀取；Claude Code、Gemini CLI 透過橋接檔讀取"
+    see_also: ["bridge file", "CLAUDE.md", "GEMINI.md"]
+
+  - term: "bridge file"
+    zh: "橋接檔"
+    definition: "指向 AGENTS.md 的導向檔案，包含 CLAUDE.md（重導向語句）、GEMINI.md（@./AGENTS.md）、.github/copilot-instructions.md（摘要版）"
+    see_also: ["AGENTS.md", "CLAUDE.md", "GEMINI.md"]
+
+  - term: "injection"
+    zh: "注入"
+    definition: "Expert Repo 將精簡版能力（lite 版）複製到 Project Repo 的 .github/agents/ 目錄，讓 Project Repo 具備該 Expert 的基礎能力"
+    see_also: ["lite version", "exports.yaml", "foundry-lite"]
+
+  - term: "lite version"
+    zh: "精簡版"
+    definition: "不超過 50 行的精簡 Skill 或角色定義，包含快速檢查清單（3-5 項）和升級條件，適合注入 Project Repo"
+    see_also: ["injection", "exports.yaml"]
+
+  - term: "exports.yaml"
+    definition: "對外宣告本 Repo 提供的能力介面，定義可供其他 Repo 引用的 skills、knowledge 和 prompts"
+    see_also: ["imports.yaml", "interface-wiring"]
+
+  - term: "imports.yaml"
+    definition: "聲明本 Repo 依賴的外部能力，每條依賴必須填寫 needs 和 reason 欄位"
+    see_also: ["exports.yaml", "interface-wiring"]
+
+  - term: "memory/"
+    definition: "Repo 的演進紀錄層，包含 decisions.md（設計決策）、lessons.md（經驗教訓）、evolution.md（演進軌跡）"
+    see_also: ["decisions.md", "lessons.md", "evolution.md"]
+
+  - term: "context/"
+    definition: "大量原始參考資料目錄，如 Framework 完整文件、領域資料、參考書；需要深度背景時才載入"
+    see_also: ["knowledge/", "context/framework/", "context/examples/"]
+
+  - term: "knowledge/"
+    definition: "精煉後的核心知識目錄，包含規範精要、命名規範、術語表、經驗法則；所有產出都必須符合此處規範"
+    see_also: ["context/", "standards/", "glossary.yaml", "heuristics.md"]
+
+  - term: "role-bootstrap"
+    definition: "RoleFoundry 的旗艦技能（Skill 1），引導使用者完成從角色定義到完整 Repo 的端到端流程"
+    see_also: [".github/skills/role-bootstrap/SKILL.md"]
+
+  - term: "trigger"
+    zh: "觸發條件"
+    definition: "一句話描述何時應該啟動某技能，是 Agent 判斷「要不要用這個 Skill」的依據，必須具體且不超過 25 字"
+    see_also: ["_index.yaml", "Skill"]
+
+  - term: "mode"
+    zh: "執行模式"
+    definition: "技能的執行方式：interactive（需使用者互動）/ autonomous（自主完成）/ hybrid（依情況決定）"
+    see_also: ["SKILL.md"]
+
+  - term: "anti_pattern"
+    zh: "反模式"
+    definition: "角色設計中常見的錯誤模式，記錄在 identity.yaml 的 anti_patterns 欄位中明確提示 Agent 避免"
+    see_also: ["identity.yaml"]
+
+  - term: "heuristic"
+    zh: "經驗法則"
+    definition: "快速判斷的簡明規則，匯整在 .ai/knowledge/heuristics.md，補充 principles.md 中無法窮舉的判斷情境"
+    see_also: ["principles.md", ".ai/knowledge/heuristics.md"]
+
+  - term: "one_liner"
+    definition: "角色定位的單句描述，放在 identity.yaml 的 role.one_liner 欄位，不超過 20 字；超過表示角色定位尚未釐清"
+    see_also: ["identity.yaml"]
+
+  - term: "scaffold"
+    zh: "鷹架"
+    definition: "一鍵產生角色 Repo 骨架目錄結構的動作，由 tools/scaffold.sh 執行，不填入內容（內容由 role-bootstrap 填充）"
+    see_also: ["tools/scaffold.sh", "role-bootstrap"]
+
+  - term: "healthcheck"
+    zh: "健康檢查"
+    definition: "掃描角色 Repo 結構完整性與品質的評估流程，由 repo-healthcheck Skill 執行，涵蓋結構/身份/技能/介面/記憶五個維度"
+    see_also: [".github/skills/repo-healthcheck/SKILL.md"]
+
+  - term: "schema_version"
+    definition: "記錄 identity.yaml 或其他 YAML 文件的格式版本，目前為 1.0，用於未來格式升級時的相容性判斷"
+    see_also: ["identity.yaml"]

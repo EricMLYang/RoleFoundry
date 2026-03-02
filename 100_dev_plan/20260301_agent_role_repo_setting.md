@@ -1,20 +1,17 @@
 # Agent Role Repo Framework v2
 
 ## 設計哲學
+每個 Repo 是一個角色的「技能容器」，例如: PM、架構師、設計師、領域專家 ... 等，
+其封裝了該角色的知識、工具、和其他高層次 context，例如:分析框架、決策邏輯、品質標準與溝通風格，
+搭配不同 Coding Agent，可以隨者 AI 特定持續協助角色 Agent 做實際產出。
 
-**AI 時代的護城河是「編碼過的判斷力」。** 每個 Repo 是一個角色的「技能容器」——封裝了分析框架、決策邏輯、品質標準與溝通風格。
-
-核心原則：**一份 Markdown 為王，各 Agent 只做橋接。**
 
 ---
-
-## 一、Multi-Agent 橋接架構
-
+## 一、多個 Coding Agent 橋接架構
 團隊混用 Claude Code、GitHub Copilot、Codex CLI、Gemini CLI。
 最穩健的做法是「一個核心 Markdown + 各自的 Router 設定檔」。
 
 ### 各 Agent 的預設讀取檔
-
 | Agent | 預設讀取檔 | 橋接方式 |
 |-------|-----------|---------|
 | **Codex CLI** | `AGENTS.md`（原生） | 不需橋接，直接就是核心 |
@@ -22,8 +19,8 @@
 | **GitHub Copilot** | `.github/copilot-instructions.md` | 內容指向 AGENTS.md |
 | **Gemini CLI** | `GEMINI.md` | 用 `@./AGENTS.md` import 語法 |
 
-### 各橋接檔的內容
 
+### 各橋接檔的內容
 **CLAUDE.md**
 ```markdown
 # Claude Code Entry Point
@@ -50,15 +47,15 @@
 本 Repo 的完整工作規範定義在根目錄的 AGENTS.md。
 以下為 Copilot 需要遵循的核心摘要：
 
+
 ## 角色
 見 .ai/identity.yaml
 
-## 編碼規範
-見 .ai/knowledge/standards/
+## 高層次角色知識
+見 .ai/knowledge/
 
 ## Skills 與 Prompts
 見 .github/skills/ 和 .github/prompts/
-
 ---
 完整版請參閱 AGENTS.md。
 ```
@@ -78,7 +75,6 @@ project_doc_max_bytes = 65536
 ---
 
 ## 二、目錄結構
-
 ```
 <role-or-project-repo>/
 │
@@ -143,8 +139,8 @@ project_doc_max_bytes = 65536
 └── docs/                            # 文件產出區
 ```
 
-### 三層分離的設計邏輯
 
+### 三層分離的設計邏輯
 ```
 ┌──────────────────────────────────────────────────────────┐
 │  .github/          「能做什麼」— 技能、提示、代理人定義     │
@@ -173,6 +169,8 @@ project_doc_max_bytes = 65536
 
 ---
 
+
+
 ## 三、AGENTS.md 核心本體內容結構
 
 ```markdown
@@ -199,8 +197,9 @@ project_doc_max_bytes = 65536
 | `.ai/memory/` | 決策日誌與經驗 | 遇到類似情境時參考 |
 | `context/` | 大量領域上下文 | 需要深度背景資訊時 |
 
-## 工作規範
 
+
+## 工作規範
 ### 所有 Agent 共同遵守
 1. 產出標註來源：任何重要產出都標記 `[Agent: <agent-name>]`
 2. 決策留痕：重大決定記錄到 `.ai/memory/decisions.md`
@@ -218,9 +217,10 @@ project_doc_max_bytes = 65536
 1. 查看 `.ai/interfaces/imports.yaml` 了解可用的外部能力
 2. 讀取對應 Expert Repo 的 exports 了解介面規格
 3. 如果該角色有注入本 Repo 的 lite 版，優先使用 `.github/agents/` 下的定義
+---
+
 
 ## Agent 特定補充
-
 ### Claude Code
 - 支援 Project Knowledge，可將 `.ai/` 和 `context/` 加入 Project
 - 適合：深度分析、長文撰寫、複雜重構、多檔案編輯
@@ -243,8 +243,8 @@ project_doc_max_bytes = 65536
 
 ---
 
-## 四、核心抽象定義
 
+## 四、核心抽象定義
 ### 4.1 identity.yaml — 角色身份卡
 
 ```yaml

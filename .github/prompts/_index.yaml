@@ -1,0 +1,24 @@
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+prompts:
+  - name: "角色訪談"
+    alias: "role-interview"
+    description: "結構化訪談 Prompt（6 題），收集建立角色 Repo 所需的所有資訊"
+    use_when: "role-bootstrap Skill 的 Step 1"
+    path: ".github/prompts/role-interview.prompt.md"
+    standalone: true  # 也可以獨立於 role-bootstrap 使用
+
+  - name: "技能撰寫模板"
+    alias: "skill-template"
+    description: "SKILL.md 的完整段落結構模板，含佔位符提示"
+    use_when: "skill-author Skill 的 Step 2"
+    path: ".github/prompts/skill-template.prompt.md"
+    standalone: false
+
+  - name: "決策原則萃取"
+    alias: "principle-elicitation"
+    description: "從真實案例中萃取 principles.md 原則的引導 Prompt"
+    use_when: "identity-forge Skill 的 Step 3，或需要優化 principles.md 時"
+    path: ".github/prompts/principle-elicitation.prompt.md"
+    standalone: true

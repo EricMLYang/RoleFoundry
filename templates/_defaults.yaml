@@ -1,0 +1,26 @@
+# _defaults.yaml — 預設技能登記表
+# 所有新鍛造的角色 Repo 自動包含這裡列出的技能
+# 新增預設技能流程：
+#   1. 在 templates/default-skills/<alias>/ 建立 SKILL.md + checklist.md + changelog.md
+#   2. 在此檔案新增一條 entry
+#   3. 下次執行 role-bootstrap 時，新 Repo 自動包含這個技能
+
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+default_skills:
+  - alias: "skill-expand"
+    name: "技能擴充"
+    description: "為自身角色新增技能的基礎能力（元技能）"
+    source: "templates/default-skills/skill-expand/"
+    trigger: "當發現某個重複性任務沒有對應技能時"
+    mode: hybrid
+    note: "所有角色 Repo 的預設技能，不需要修改即可使用"
+
+  - alias: "copilot-sync"
+    name: "Copilot 橋接同步"
+    description: "確保 copilot-instructions.md 與 AGENTS.md 的必要資訊保持同步"
+    source: "templates/default-skills/copilot-sync/"
+    trigger: "當 AGENTS.md 有修改時，或確認橋接同步狀態"
+    mode: hybrid
+    note: "所有角色 Repo 的預設技能；同步只保留必要資訊，不將 AGENTS.md 的完整內容搬入"

@@ -1,0 +1,43 @@
+<!--
+  [SYNC SCOPE] 本檔案只包含「必要資訊」，完整資訊見 AGENTS.md。
+  當 AGENTS.md 更新後，使用 copilot-sync Skill 確認本檔案的同步狀態。
+
+  必須同步：角色識別（name/alias/one_liner/perspective/bounds）、技能表（以 _index.yaml 為準）
+  條件同步：工作規範（結構性大改時）、目錄快查（有新增/移除時）
+  不同步：詳細原則、跨 Repo 規則、Agent 特定說明、框架層細節
+-->
+
+# GitHub Copilot Instructions — {{ROLE_NAME_ZH}}
+
+本 Repo 的完整工作規範定義在根目錄的 **AGENTS.md**。
+以下為 Copilot 需要遵循的核心摘要：
+
+---
+
+## 角色
+
+**{{ROLE_NAME_ZH}}**（{{ROLE_ALIAS}}）— {{ONE_LINER}}
+
+視角：{{PERSPECTIVE_SUMMARY}}
+邊界：擁有 {{OWNS_SUMMARY}}；尊重 {{DEFERS_TO_SUMMARY}}。
+
+---
+
+## 核心技能
+
+{{SKILLS_TABLE_COPILOT}}
+
+完整技能定義見 `.github/skills/_index.yaml`。
+
+---
+
+## 工作規範
+
+1. 所有產出符合 `.ai/knowledge/standards/` 的規範
+2. 術語使用 `.ai/knowledge/glossary.yaml` 的定義
+3. 執行任務前確認是否有對應 Skill（查 `.github/skills/_index.yaml`）
+4. 重要決策記錄至 `.ai/memory/decisions.md`
+
+---
+
+完整版請參閱 **AGENTS.md**。

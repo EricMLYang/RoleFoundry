@@ -1,0 +1,57 @@
+schema_version: "1.0"
+last_updated: "2026-03-02"
+
+skills:
+  - name: "角色 Repo 起始"
+    alias: "role-bootstrap"
+    trigger: "當需要建立一個全新的角色 Repo 時"
+    description: "端到端產生完整的角色 Repo，含身份、原則、技能、橋接檔"
+    mode: interactive
+    estimated_effort: high
+    phase: 1
+    path: ".github/skills/role-bootstrap/SKILL.md"
+
+  - name: "角色身份鍛造"
+    alias: "identity-forge"
+    trigger: "當需要定義或優化角色的身份、原則、能力邊界時"
+    description: "透過結構化訪談產出 identity.yaml 和 principles.md"
+    mode: interactive
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/identity-forge/SKILL.md"
+
+  - name: "技能撰寫"
+    alias: "skill-author"
+    trigger: "當需要為角色 Repo 新增或重寫技能時"
+    description: "產出完整的 Skill 目錄含 SKILL.md、範例、checklist"
+    mode: hybrid
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/skill-author/SKILL.md"
+
+  - name: "Repo 健康檢查"
+    alias: "repo-healthcheck"
+    trigger: "當需要評估既有角色 Repo 的品質與完整性時"
+    description: "掃描 Repo 結構，產出健康報告與改善建議"
+    mode: autonomous
+    estimated_effort: low
+    phase: 2
+    path: ".github/skills/repo-healthcheck/SKILL.md"
+
+  - name: "介面配線"
+    alias: "interface-wiring"
+    trigger: "當需要建立或更新角色之間的協作介面時"
+    description: "產生/更新 exports、imports、injection lite 版"
+    mode: interactive
+    estimated_effort: medium
+    phase: 3
+    path: ".github/skills/interface-wiring/SKILL.md"
+
+  - name: "Copilot 橋接同步"
+    alias: "copilot-sync"
+    trigger: "當 AGENTS.md 有修改時，或確認橋接同步狀態"
+    description: "確保 copilot-instructions.md 與 AGENTS.md 的必要資訊保持同步"
+    mode: hybrid
+    estimated_effort: low
+    phase: 2
+    path: ".github/skills/copilot-sync/SKILL.md"

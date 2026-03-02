@@ -1,0 +1,41 @@
+# exports.yaml — RoleFoundry 對外提供的能力介面
+# 一旦其他 Repo 開始 import，這裡的定義就是承諾，不能任意修改
+
+exports:
+  skills:
+    - alias: "role-bootstrap"
+      lite_version: "injections/foundry-lite.md"
+      description: "角色 Repo 起始能力的精簡版，含快速身份品質檢查（5 項）和結構驗收清單"
+      stability: stable
+
+    - alias: "repo-healthcheck"
+      lite_version: "injections/foundry-lite.md"
+      description: "基礎結構檢查（10 個必要檔案驗證），包含在 foundry-lite 中"
+      stability: stable
+
+  knowledge:
+    - type: "standards"
+      path: "knowledge/standards/framework-v2-spec.md"
+      description: "Framework v2 規範精要，可被任何 Repo 引用作為合規性基準"
+      stability: stable
+
+    - type: "checklist"
+      path: "skills/role-bootstrap/checklist.md"
+      description: "新 Repo 品質驗收清單（14 個檢查項），可直接複製到其他 Repo 使用"
+      stability: stable
+
+    - type: "standards"
+      path: "knowledge/standards/naming-conventions.md"
+      description: "Framework v2 命名規範，確保所有 Repo 使用一致的命名方式"
+      stability: stable
+
+  prompts:
+    - alias: "role-interview"
+      path: "prompts/role-interview.prompt.md"
+      description: "角色訪談 Prompt，可獨立使用（6 題結構化問題）"
+      stability: stable
+
+    - alias: "principle-elicitation"
+      path: "prompts/principle-elicitation.prompt.md"
+      description: "決策原則萃取 Prompt，從真實案例中萃取而非發明原則"
+      stability: stable

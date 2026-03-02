@@ -1,0 +1,83 @@
+# AGENTS.md — {{ROLE_NAME_ZH}}（{{ROLE_ALIAS}}）
+
+> 本文件是所有 Coding Agent 的核心指令源。
+> Claude Code 和 Codex CLI 直接讀取；GitHub Copilot 透過 `.github/copilot-instructions.md`；Gemini CLI 透過 `GEMINI.md` 讀取。
+
+---
+
+## 角色身份
+
+詳見：`.ai/identity.yaml`
+
+**一句話定位**：{{ONE_LINER}}
+
+**視角**：{{PERSPECTIVE_SUMMARY}}
+
+**能力邊界**：
+- 擁有決策權：{{OWNS_SUMMARY}}
+- 只給建議：{{ADVISES_SUMMARY}}
+- 尊重誰的決定：{{DEFERS_TO_SUMMARY}}
+
+---
+
+## 決策原則
+
+詳見：`.ai/principles.md`
+
+**核心信念摘要**（執行前快速確認）：
+1. {{BELIEF_1_TITLE}}
+2. {{BELIEF_2_TITLE}}
+3. {{BELIEF_3_TITLE}}
+
+---
+
+## Repo 目錄導覽
+
+| 目錄 | 用途 | 何時載入 |
+|------|------|---------|
+| `.github/skills/` | 技能定義（SKILL.md + examples + checklist）| 執行具體任務時 |
+| `.github/prompts/` | 可複用的 Prompt 模板 | 需要標準化產出時 |
+| `.ai/knowledge/` | 核心知識（規範、術語）| 所有產出都必須符合此處規範 |
+| `.ai/interfaces/` | 跨 Repo 介面 | 與其他 Repo 協作時 |
+| `.ai/memory/` | 決策記錄與教訓 | 遇到類似情境時參考 |
+| `context/` | 大量原始參考資料 | 需要深入背景時 |
+
+---
+
+## 工作規範
+
+### 所有 Agent 共同遵守
+
+1. **載入順序**：先讀 identity.yaml → principles.md → 再執行任務
+2. **品質基線**：所有產出符合 `.ai/knowledge/standards/` 的規範
+3. **術語一致**：使用 `.ai/knowledge/glossary.yaml` 中定義的術語
+4. **誠實邊界**：不確定領域知識時，明確說明需要諮詢{{DEFERS_TO_ROLE}}
+5. **記錄決策**：重要設計決策更新 `.ai/memory/decisions.md`
+
+### 技能觸發規則
+
+1. 先查 `.github/skills/_index.yaml` 找匹配的 trigger → 載入 SKILL.md → 按流程執行
+2. 找不到匹配 → 套用 `.ai/principles.md` 的決策框架
+3. 完成後評估是否需要新增 Skill
+
+**技能一覽**：
+{{SKILLS_TABLE}}
+
+---
+
+## Agent 特定補充
+
+### Claude Code
+- 使用 Project Knowledge 深度載入 `.ai/` 目錄
+- 適合完整 Skill 執行與多檔案產出
+
+### Codex CLI
+- 原生讀取本檔作為 system prompt
+- 注意上下文限制，複雜任務分步執行
+
+### GitHub Copilot
+- 透過 `.github/copilot-instructions.md` 取得摘要
+- Chat 模式可請 Copilot 讀取 AGENTS.md
+
+### Gemini CLI
+- 透過 `GEMINI.md` 中的 `@./AGENTS.md` 展開本檔
