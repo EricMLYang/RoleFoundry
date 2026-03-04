@@ -76,6 +76,7 @@
 | 輔助角色新增 | `role-add` | 為既有 Repo 新增輔助角色時 | interactive |
 | 角色身份鍛造 | `identity-forge` | 定義或優化角色身份時 | interactive |
 | 技能撰寫 | `skill-author` | 新增或重寫角色技能時 | hybrid |
+| PPTX 工具流程 | `util-pptx` | 任務涉及 .pptx 簡報檔時 | autonomous |
 | Repo 健康檢查 | `repo-healthcheck` | 評估 Repo 品質時 | autonomous |
 | 介面配線 | `interface-wiring` | 建立跨 Repo 協作時 | interactive |
 | Copilot 橋接同步 | `copilot-sync` | AGENTS.md 有修改時 | hybrid |

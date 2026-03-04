@@ -1,7 +1,6 @@
 # GitHub Copilot Instructions — RoleFoundry
 本 Repo 的完整工作規範定義在根目錄的 **AGENTS.md**。
 以下為 Copilot 需要遵循的核心摘要：
-
 ---
 
 ## 角色
@@ -21,6 +20,7 @@
 | `role-add` | 為既有 Repo 新增輔助角色時 | interactive |
 | `identity-forge` | 定義或優化角色身份時 | interactive |
 | `skill-author` | 新增或重寫角色技能時 | hybrid |
+| `util-pptx` | 任務涉及 .pptx 簡報檔時 | autonomous |
 | `repo-healthcheck` | 評估 Repo 品質與完整性時 | autonomous |
 | `interface-wiring` | 建立跨 Repo 協作介面時 | interactive |
 | `copilot-sync` | AGENTS.md 有修改時，或確認橋接同步狀態 | hybrid |

@@ -29,6 +29,15 @@ skills:
     phase: 1
     path: ".github/skills/skill-author/SKILL.md"
 
+  - name: "PPTX 工具流程"
+    alias: "util-pptx"
+    trigger: "任務涉及 .pptx 簡報檔時"
+    description: "讀取、編修、重組或新建 PPTX，含內容與視覺 QA"
+    mode: autonomous
+    estimated_effort: medium
+    phase: 2
+    path: ".github/skills/util-pptx/SKILL.md"
+
   - name: "Repo 健康檢查"
     alias: "repo-healthcheck"
     trigger: "當需要評估既有角色 Repo 的品質與完整性時"
