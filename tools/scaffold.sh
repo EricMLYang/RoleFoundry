@@ -22,7 +22,6 @@ dirs=(
   "context/framework"
   "context/references"
   "context/archetypes"
-  "templates/bridge-files"
   "tools"
   "docs"
 )

@@ -32,7 +32,7 @@ B. Expert Repo，透過 Coding Agent 對話引導使用者
 ## ADR-002: templates/ 使用純文字模板而非程式化模板引擎
 
 **日期**：2026-03-02
-**狀態**：確定
+**狀態**：~~確定~~ 已廢棄（2026-03-04）— `templates/` 目錄已移除
 
 **情境**：
 role-bootstrap Skill 需要產生多個標準化檔案。可選擇：
@@ -50,6 +50,8 @@ B. 使用純文字 .tmpl 檔案，以 `{{PLACEHOLDER}}` 標記佔位
 **Trade-off**：
 - 犧牲了程式化模板的 type-safe 和 validation
 - 換取了人類可讀性和零依賴
+
+**後記（2026-03-04）**：`templates/` 目錄已移除。理由：初期維護成本高於收益，且 Coding Agent 可直接依規範產生正確結構，無需 `.tmpl` 作為中介。改為在 SKILL.md 中 inline 產出結構說明。
 
 ---
 

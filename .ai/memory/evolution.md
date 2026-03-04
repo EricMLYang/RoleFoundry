@@ -28,7 +28,7 @@
 **新增的支援檔案**：
 - `.github/skills/_index.yaml`（技能目錄）
 - `.github/prompts/`（3 個 Prompt 模板）
-- `templates/`（9 個 .tmpl 模板）
+- `templates/`（9 個 .tmpl 模板，已於 2026-03-04 移除）
 - `context/framework/agent-role-repo-framework-v2.md`（Framework v2 完整規範）
 
 **待完成**（Phase 1 尾段）：

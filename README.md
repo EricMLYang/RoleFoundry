@@ -59,7 +59,6 @@ Agent 會透過 `role-bootstrap` Skill 引導你完成 5 個步驟：
 .github/prompts/    可複用的 Prompt 模板
 .ai/                角色身份、原則、知識、介面、記憶
 context/            Framework v2 完整規範、參考資料、範例
-templates/          空白模板（role-bootstrap 使用）
 tools/              輔助腳本（scaffold.sh, validate-repo.sh）
 docs/               快速上手指南、常見問題
 ```

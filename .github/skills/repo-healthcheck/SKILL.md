@@ -54,6 +54,10 @@ context/framework/（任意 Framework 文件）
 README.md
 ```
 
+**橋接檔格式確認**（格式錯誤 → WARN）：
+- `CLAUDE.md` 應包含 `@AGENTS.md`（@ 語法引入，非散文說明）
+- `GEMINI.md` 應包含 `@./AGENTS.md`（@ 語法引入）
+
 計算：Structure Score = 通過必要檔案數 / 必要檔案總數
 
 ### Step 2: 身份一致性檢查（Identity）[autonomous]
