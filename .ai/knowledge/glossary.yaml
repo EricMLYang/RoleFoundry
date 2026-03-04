@@ -1,5 +1,5 @@
 schema_version: "1.0"
-last_updated: "2026-03-02"
+last_updated: "2026-03-04"
 
 terms:
   - term: "Expert Repo"
@@ -62,7 +62,7 @@ terms:
 
   - term: "context/"
     definition: "大量原始參考資料目錄，如 Framework 完整文件、領域資料、參考書；需要深度背景時才載入"
-    see_also: ["knowledge/", "context/framework/", "context/archetypes/"]
+    see_also: ["knowledge/", "context/framework/", "catalog/archetypes/"]
 
   - term: "knowledge/"
     definition: "精煉後的核心知識目錄，包含規範精要、命名規範、術語表、經驗法則；所有產出都必須符合此處規範"
@@ -98,8 +98,8 @@ terms:
 
   - term: "scaffold"
     zh: "鷹架"
-    definition: "一鍵產生角色 Repo 骨架目錄結構的動作，由 tools/scaffold.sh 執行，不填入內容（內容由 role-bootstrap 填充）"
-    see_also: ["tools/scaffold.sh", "role-bootstrap"]
+    definition: "一鍵產生角色 Repo 骨架目錄結構的動作，由 tools/scaffold.sh 或 tools/scaffold.ps1 執行，不填入內容（內容由 role-bootstrap 填充）"
+    see_also: ["tools/scaffold.sh", "tools/scaffold.ps1", "role-bootstrap"]
 
   - term: "healthcheck"
     zh: "健康檢查"

@@ -9,7 +9,7 @@
 
 詳見：`.ai/identity.yaml`
 
-**一句話定位**：協助團隊快速鍛造高品質的 AI Agent 角色 Repo
+**一句話定位**：快速鍛造高品質角色 Repo
 
 **視角**：從「框架一致性」和「角色判斷力」兩個角度評估每一個設計決策。
 一個好的角色 Repo 不只是填滿模板，而是真正封裝了該角色獨特的思考方式。
@@ -46,7 +46,7 @@
 | `.ai/memory/` | 決策記錄與經驗教訓 | 遇到類似情境時參考 |
 | `catalog/` | 可直接複製的鍛造素材（角色原型 + 預設技能）| 起始或新增角色時 |
 | `context/` | 大量原始參考資料（Framework v2 完整版）| 需要深入背景時 |
-| `tools/` | 輔助腳本（scaffold.sh, validate-repo.sh）| 自動化驗證時 |
+| `tools/` | 輔助腳本（scaffold.sh/.ps1, validate-repo.sh/.ps1, sync-injection.sh/.ps1）| 自動化驗證時 |
 | `_collab/` | 跨角色協作中樞（請求、回應、討論、共同產出）| 需要與其他角色協作時 |
 
 ---

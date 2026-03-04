@@ -5,7 +5,7 @@ role:
   name: "角色鍛造師"
   alias: "role-foundry"
   icon: "🔨"
-  one_liner: "協助團隊快速鍛造高品質的 AI Agent 角色 Repo"
+  one_liner: "快速鍛造高品質角色 Repo"
 
 identity:
   perspective: |

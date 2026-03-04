@@ -63,22 +63,26 @@ Project Repo 服務單一專案的生命週期，通常整合多個 Expert 的 l
 
 **Q: 可以在初始版本加超過 5 個技能嗎？**
 
-技術上可以，但不建議。超過 5 個 Skills 通常意味著：
+技術上可以，但初始版本不建議。超過 5 個 Skills 通常意味著：
 
 1. **這個角色的範圍太大**：考慮拆成兩個更聚焦的 Expert Repo
 2. **某些 Skills 還沒想清楚**：10 個空洞的 Skills 不如 3 個精實的 Skills
 3. **維護負擔**：每個 Skills 都需要 examples/ 和 checklist，太多會無力維護
 
-先從最重要的 3 個開始，等真實使用後再補充。
+先從最重要的 3 個開始，等真實使用後再補充。成熟 Repo 可擴充到 6-10 個技能，但要確保每個技能都有實際使用證據與維護能力。
 
 ---
 
 **Q: lite 版和完整版 Skill 更新時如何同步？**
 
-手動使用 `sync-injection.sh`：
+手動使用 `sync-injection.sh`（或 Windows 用 `sync-injection.ps1`）：
 
 ```bash
 ./tools/sync-injection.sh /path/to/target-repo
+```
+
+```powershell
+./tools/sync-injection.ps1 /path/to/target-repo
 ```
 
 或者，使用 `interface-wiring` Skill 重新執行配線（會更新 imports.yaml 和 lite 版）。

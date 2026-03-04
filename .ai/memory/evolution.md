@@ -70,3 +70,48 @@
 - `docs/faq.md`（8 個常見問題）
 
 **全部里程碑達成（M0-M4）**
+
+---
+
+## Round 4（2026-03-04）— catalog/ 重組 + role-bootstrap 快速路徑
+
+**目錄重組**：
+- 建立 `catalog/` 頂層目錄，語意為「可直接複製的鍛造素材」
+- `context/archetypes/` → `catalog/archetypes/`（git mv）
+- `context/default-skills/` → `catalog/default-skills/`（git mv）
+- `context/` 恢復為純參考資料目錄（僅剩 framework/ 和 references/）
+
+**role-bootstrap 流程改造**：
+- 新增 Step 0（目錄瀏覽與路徑選擇），總步驟數從 5 變 6（0–5）
+- 路徑 (a) 直接複製：最小輸入（名稱 + alias + 路徑），無訪談
+- 路徑 (b) 微調：精簡訪談（僅 differentiation + principles 兩組）
+- 路徑 (c) 完整訪談：原有流程不變
+
+**路徑引用更新**：
+- `catalog/archetypes/_index.yaml`：5 個 `path:` 欄位更新
+- `catalog/default-skills/_defaults.yaml`：2 個 `source:` 欄位 + 注釋更新
+- `.github/skills/role-add/SKILL.md`：2 處引用更新
+- `.github/skills/role-bootstrap/SKILL.md`：6 處引用更新
+
+**文件同步**：
+- `AGENTS.md`、`README.md`、`copilot-instructions.md`、`docs/getting-started.md` 全部同步更新
+
+---
+
+## Round 5（2026-03-04）— 流程全修（健康檢查修正 + Windows 工具鏈）
+
+**健康檢查修正**：
+- `.ai/identity.yaml` 的 `one_liner` 精簡至 20 字以內
+- `.github/skills/_index.yaml` 中過長 trigger 已縮短（`copilot-sync`、`catalog-update`）
+- `repo-healthcheck` 的技能數量準則調整為「初始 3-5、成熟 6-10」
+
+**一致性修正**：
+- `.github/copilot-instructions.md` 補上 `collab-join` 技能
+- `_collab/_registry.yaml` 新增 `role-foundry` 參與者條目
+- `tools/scaffold.sh` 路徑由 `context/archetypes` 修正為 `catalog/archetypes` 參考語意
+
+**跨平台工具補強**：
+- 新增 `tools/validate-repo.ps1`
+- 新增 `tools/scaffold.ps1`
+- 新增 `tools/sync-injection.ps1`
+- `AGENTS.md`、`README.md`、`docs/getting-started.md`、`docs/faq.md` 更新雙腳本用法

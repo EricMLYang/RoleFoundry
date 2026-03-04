@@ -97,4 +97,4 @@ description: Establish or update collaboration interfaces between two repos. Use
 ## 已知限制（Limitations）
 
 - 無法自動判斷「什麼時候應該使用完整版而非 lite 版」——升級條件需要使用者提供輸入
-- Lite 版是手動同步的；如果來源 Repo 的 Skill 更新，需要重新執行本技能（或使用 sync-injection.sh）
+- Lite 版是手動同步的；如果來源 Repo 的 Skill 更新，需要重新執行本技能（或使用 sync-injection.sh / sync-injection.ps1）

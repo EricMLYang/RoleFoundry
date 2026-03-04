@@ -70,7 +70,7 @@ else
   echo "  ❌ 結構驗證失敗（$FAIL 個必要檔案缺失）"
   echo ""
   echo "修復方式："
-  echo "  1. 使用 scaffold.sh 補建缺失的目錄和空檔案"
+  echo "  1. 使用 scaffold.sh / scaffold.ps1 補建缺失的目錄和空檔案"
   echo "  2. 使用 role-bootstrap Skill 填入必要內容"
   exit 1
 fi

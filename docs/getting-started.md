@@ -55,9 +55,15 @@ Agent 會自動觸發 **role-bootstrap** Skill，開始引導流程。
 
 ---
 
-## Step 3：回答訪談問題
+## Step 3：選擇路徑並回答問題
 
-Agent 會問你 6 個問題（`role-interview.prompt.md` 的結構化訪談）：
+Agent 首先展示 `catalog/archetypes/` 中的可用原型目錄，請你選擇路徑：
+
+- **(a) 直接複製**：最小輸入（僅需角色名稱 + alias），無訪談，快速完成
+- **(b) 以原型微調**：精簡訪談（約 6 個問題），以選定原型為起點客製化
+- **(c) 從空白開始**：完整訪談（6 個問題），完全自訂
+
+選擇路徑 (b) 或 (c) 時，Agent 會問你 6 個問題（`role-interview.prompt.md` 的結構化訪談）：
 
 1. **角色基本資料**：名稱、英文代號、Expert 或 Project 類型
 2. **一句話定位**：這個角色存在的原因
@@ -137,6 +143,10 @@ Agent 觸發 **interface-wiring** Skill。
 ./tools/validate-repo.sh /path/to/your-new-repo
 ```
 
+```powershell
+./tools/validate-repo.ps1 /path/to/your-new-repo
+```
+
 exit 0 = 10 個必要檔案全部存在；exit 1 = 有缺失。
 
 ### 建立空骨架（補救用）
@@ -145,11 +155,15 @@ exit 0 = 10 個必要檔案全部存在；exit 1 = 有缺失。
 ./tools/scaffold.sh /path/to/new-repo
 ```
 
+```powershell
+./tools/scaffold.ps1 /path/to/new-repo
+```
+
 ---
 
 ## 角色原型參考
 
-- [PM 原型](../context/archetypes/pm/) — 產品經理預設值與引導問題
-- [架構師原型](../context/archetypes/architect/) — 系統架構師預設值與引導問題
-- [領域專家原型](../context/archetypes/domain-expert/) — 領域專家預設值與引導問題
-- [考試輔助師原型](../context/archetypes/exam-tutor/) — 考試輔助師預設值與引導問題
+- [PM 原型](../catalog/archetypes/pm/) — 產品經理預設值與引導問題
+- [架構師原型](../catalog/archetypes/architect/) — 系統架構師預設值與引導問題
+- [領域專家原型](../catalog/archetypes/domain-expert/) — 領域專家預設值與引導問題
+- [考試輔助師原型](../catalog/archetypes/exam-tutor/) — 考試輔助師預設值與引導問題

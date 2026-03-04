@@ -100,7 +100,7 @@ Identity Score = 通過項數 / 總檢查項數
 | changelog.md 存在 | 對應目錄有此檔案 |
 
 **整體技能指標**：
-- 技能數量 3-5 個？（過少 WARN，過多 WARN）
+- 技能數量 3-10 個？（<3 WARN，>10 WARN；其中 3-5 為初始建議值）
 - 是否有 interactive 和 autonomous 兩種模式的技能？
 
 Skills Score = 通過項數 / 總檢查項數
@@ -131,7 +131,7 @@ Skills Score = 通過項數 / 總檢查項數
 ```markdown
 # Health Report — [Repo 名稱]
 Generated: [日期]
-Checked by: repo-healthcheck v1.0
+Checked by: repo-healthcheck v1.1
 
 ## Summary Score
 
@@ -186,4 +186,4 @@ Checked by: repo-healthcheck v1.0
 
 - 無法評估 SKILL.md 的內容品質（只能檢查結構），內容品質需要人類判斷
 - 無法驗證 principles.md 的原則是否「真正來自真實兩難情境」
-- 技能計數的「過少/過多」警告是基於 3-5 的建議範圍，實際上每個 Repo 情況不同
+- 技能計數採 3-10 的通用警戒區間；其中 3-5 為初始 Repo 的建議值

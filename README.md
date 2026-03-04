@@ -1,6 +1,6 @@
 # RoleFoundry — 角色 Repo 鍛造工坊 🔨
 
-> 協助團隊快速鍛造高品質的 AI Agent 角色 Repo
+> 快速鍛造高品質角色 Repo
 
 ---
 
@@ -43,7 +43,8 @@ gemini  # GEMINI.md 會自動展開 AGENTS.md
 
 **Step 3：回答訪談問題，確認產出**
 
-Agent 會透過 `role-bootstrap` Skill 引導你完成 5 個步驟：
+Agent 會透過 `role-bootstrap` Skill 引導你完成 6 個步驟：
+0. 目錄瀏覽（選擇原型與路徑）
 1. 角色訪談（收集必要資訊）
 2. 結構規劃（確認目錄設計）
 3. 核心檔案產生（自動產出所有檔案）
@@ -58,8 +59,9 @@ Agent 會透過 `role-bootstrap` Skill 引導你完成 5 個步驟：
 .github/skills/     技能定義（5 個核心技能）
 .github/prompts/    可複用的 Prompt 模板
 .ai/                角色身份、原則、知識、介面、記憶
-context/            Framework v2 完整規範、參考資料、範例
-tools/              輔助腳本（scaffold.sh, validate-repo.sh）
+catalog/            可直接複製的鍛造素材（角色原型 + 預設技能）
+context/            Framework v2 完整規範、參考資料
+tools/              輔助腳本（scaffold.sh/.ps1, validate-repo.sh/.ps1, sync-injection.sh/.ps1）
 docs/               快速上手指南、常見問題
 ```
 
@@ -90,5 +92,5 @@ docs/               快速上手指南、常見問題
 - **快速上手**：[docs/getting-started.md](docs/getting-started.md)
 - **常見問題**：[docs/faq.md](docs/faq.md)
 - **框架規範**：[context/framework/agent-role-repo-framework-v2.md](context/framework/agent-role-repo-framework-v2.md)
-- **角色原型**：[context/archetypes/](context/archetypes/)
+- **角色原型**：[catalog/archetypes/](catalog/archetypes/)
 - **完整指令**：[AGENTS.md](AGENTS.md)（Coding Agent 入口）

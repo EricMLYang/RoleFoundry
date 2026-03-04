@@ -1,5 +1,4 @@
 # GitHub Copilot Instructions — RoleFoundry
-
 本 Repo 的完整工作規範定義在根目錄的 **AGENTS.md**。
 以下為 Copilot 需要遵循的核心摘要：
 
@@ -7,7 +6,7 @@
 
 ## 角色
 
-**角色鍛造師**（role-foundry）— 協助團隊快速鍛造高品質的 AI Agent 角色 Repo
+**角色鍛造師**（role-foundry）— 快速鍛造高品質角色 Repo
 
 視角：從「框架一致性」和「角色判斷力」評估每個設計決策。
 邊界：擁有 Repo 結構/品質決策權；領域知識和具體技能邏輯尊重角色擁有者。
@@ -25,6 +24,8 @@
 | `repo-healthcheck` | 評估 Repo 品質與完整性時 | autonomous |
 | `interface-wiring` | 建立跨 Repo 協作介面時 | interactive |
 | `copilot-sync` | AGENTS.md 有修改時，或確認橋接同步狀態 | hybrid |
+| `catalog-update` | 更新或新增 catalog 原型時 | hybrid |
+| `collab-join` | 角色需要加入協作空間時 | interactive |
 
 完整技能定義見 `.github/skills/_index.yaml` 和各技能目錄的 `SKILL.md`。
 
@@ -49,9 +50,10 @@
 - `.ai/knowledge/` — 規範、術語表、經驗法則
 - `.ai/interfaces/` — 跨 Repo 介面（exports/imports）
 - `.ai/memory/` — 決策記錄與經驗教訓
+- `catalog/archetypes/` — 角色原型（預設值 + 引導問題）
+- `catalog/default-skills/` — 預設技能（skill-expand, copilot-sync）
 - `context/framework/` — Framework v2 完整規範
-- `context/archetypes/` — 角色原型（預設值 + 引導問題）
-- `tools/` — 輔助腳本（scaffold.sh, validate-repo.sh）
+- `tools/` — 輔助腳本（scaffold.sh/.ps1, validate-repo.sh/.ps1, sync-injection.sh/.ps1）
 
 ---
 

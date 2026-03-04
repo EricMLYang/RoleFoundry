@@ -3,14 +3,28 @@
 # 用途：讓任何角色快速查到「誰能幫我做什麼」
 
 schema_version: "1.0"
-last_updated: "2026-03-02"
+last_updated: "2026-03-04"
 
 # ============================================================
-# 以下為範例角色，展示 registry 的使用方式
-# 實際使用時替換為真實的角色 Repo 資訊
+# 協作角色清單（包含本 Repo 與示範角色）
 # ============================================================
 
 participants:
+  - alias: "role-foundry"
+    name: "角色鍛造師"
+    icon: "🔨"
+    repo_path: "."
+    exports_ref: ".ai/interfaces/exports.yaml"
+    status: active
+    can_handle:
+      - alias: "role-bootstrap"
+        description: "引導建立新角色 Repo 的完整流程"
+      - alias: "repo-healthcheck"
+        description: "產出 5 維度結構化健康報告"
+      - alias: "interface-wiring"
+        description: "建立跨 Repo exports/imports 與 lite 注入"
+    preferred_collab_style: "先定義框架邊界，再給可執行步驟"
+
   - alias: "architect"
     name: "架構師"
     icon: "🏗️"
