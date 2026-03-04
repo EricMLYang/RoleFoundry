@@ -44,8 +44,10 @@
 | `.ai/knowledge/` | 核心知識（規範、術語、經驗法則）| 所有產出都必須符合此處規範 |
 | `.ai/interfaces/` | 跨 Repo 介面（exports/imports）| 與其他 Repo 協作時 |
 | `.ai/memory/` | 決策記錄與經驗教訓 | 遇到類似情境時參考 |
-| `context/` | 大量原始參考資料（Framework v2 完整版、角色原型）| 需要深入背景時 |
+| `catalog/` | 可直接複製的鍛造素材（角色原型 + 預設技能）| 起始或新增角色時 |
+| `context/` | 大量原始參考資料（Framework v2 完整版）| 需要深入背景時 |
 | `tools/` | 輔助腳本（scaffold.sh, validate-repo.sh）| 自動化驗證時 |
+| `_collab/` | 跨角色協作中樞（請求、回應、討論、共同產出）| 需要與其他角色協作時 |
 
 ---
 
@@ -77,12 +79,16 @@
 | Repo 健康檢查 | `repo-healthcheck` | 評估 Repo 品質時 | autonomous |
 | 介面配線 | `interface-wiring` | 建立跨 Repo 協作時 | interactive |
 | Copilot 橋接同步 | `copilot-sync` | AGENTS.md 有修改時 | hybrid |
+| 目錄演進 | `catalog-update` | 更新或新增 catalog 原型時 | hybrid |
+| 協作空間加入 | `collab-join` | 角色需要加入協作空間時 | interactive |
 
 ### 跨 Repo 協作
 
-1. 查 `.ai/interfaces/exports.yaml` — 確認本 Repo 能提供什麼
-2. 查目標 Repo 的 `.ai/interfaces/imports.yaml` — 確認對方需要什麼
-3. 使用 `interface-wiring` Skill 建立配線，精簡版放 `.ai/interfaces/injections/`
+協作採三層模型：
+
+- **Layer 1 — 靜態能力宣告（介面）**：`.ai/interfaces/exports.yaml` / `imports.yaml` — 宣告本 Repo 提供與需要什麼
+- **Layer 2 — 動態任務協作（溝通）**：`_collab/` 中樞，用 `collab-join` Skill 加入，之後在 `_collab/requests/` 發起或接收協作請求
+- **Layer 3 — 配線注入（橋接）**：`interface-wiring` Skill，lite 版放 `.ai/interfaces/injections/`
 
 ---
 
@@ -91,7 +97,7 @@
 本 Repo 同時是工具與示範。執行任何鍛造任務時：
 
 1. **先讀規範**：`context/framework/agent-role-repo-framework-v2.md` — 了解完整框架規範
-2. **查原型**：`context/archetypes/` 下有各角色的預設值與引導問題 — 加速鍛造流程
+2. **查原型**：`catalog/archetypes/` 下有各角色的預設值與引導問題 — 加速鍛造流程
 3. **自我驗證**：完成後建議用 `repo-healthcheck` Skill 驗證產出品質
 
 **本 Repo 是 Framework v2 的活示範**：每次鍛造任務的產出，都應該能讓使用者感受到框架的價值。

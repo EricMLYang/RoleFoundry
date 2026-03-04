@@ -64,3 +64,21 @@ skills:
     estimated_effort: medium
     phase: 1
     path: ".github/skills/role-add/SKILL.md"
+
+  - name: "目錄演進"
+    alias: "catalog-update"
+    trigger: "當需要更新或新增 catalog/archetypes/ 中的原型時"
+    description: "根據真實使用經驗更新現有原型，或為 catalog 新增全新原型"
+    mode: hybrid
+    estimated_effort: medium
+    phase: 4
+    path: ".github/skills/catalog-update/SKILL.md"
+
+  - name: "協作空間加入"
+    alias: "collab-join"
+    trigger: "當角色需要加入協作空間或設定協作對象時"
+    description: "登記於 _collab/_registry.yaml 並在 AGENTS.md 生成協作段落"
+    mode: interactive
+    estimated_effort: low
+    phase: 3
+    path: ".github/skills/collab-join/SKILL.md"

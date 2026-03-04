@@ -113,6 +113,7 @@ Skills Score = 通過項數 / 總檢查項數
 | imports.yaml 有說明 | 即使是空的，也有說明原因的注釋 |
 | exports 的 lite 版存在 | 如果 exports 中有 lite_version 路徑，對應檔案存在 |
 | imports 的 reason 欄位 | 每條 import 有 reason 說明 |
+| 角色是否已加入協作空間 | AGENTS.md 有「跨角色協作」段落 + `_collab/_registry.yaml` 有此角色條目 | PASS/WARN |
 
 ### Step 5: 記憶活躍度（Memory）[autonomous]
 
