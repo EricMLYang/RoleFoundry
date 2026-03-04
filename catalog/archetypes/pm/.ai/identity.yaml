@@ -22,6 +22,7 @@ capabilities:
   secondary:
     - "使用者訪談與需求萃取"
     - "里程碑規劃與 Sprint 設計"
+    - "Discovery 流程治理（Inbox -> OPP -> Backlog -> Handoff）"
 
 boundaries:
   owns:

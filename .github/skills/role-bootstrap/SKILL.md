@@ -88,7 +88,7 @@ Step 1a 改為直接展示預設值（無需自動匹配）；Step 1b 只問 `di
 2. **一句話定位**：格式「確保 [目標] 在 [約束條件] 下 [達成方式]」，引導使用者凝練出 one_liner
 3. **能力邊界**：owns（決策權）、advises（只給建議）、defers_to（尊重誰的決定）
 4. **視角與風格**：用比喻描述思考方式，確認溝通風格
-5. **初始技能**：最常被叫去做的 3-5 件事，各附觸發條件
+5. **初始技能**：最常被叫去做的 3-5 件事（流程型角色可 6-8），各附觸發條件
 6. **反模式**：這個角色表現不佳時，最容易犯什麼錯
 
 訪談完成後，輸出「角色訪談摘要」（markdown 格式），等待使用者確認或修正。
@@ -114,7 +114,8 @@ Step 1a 改為直接展示預設值（無需自動匹配）；Step 1b 只問 `di
   1. 從 `catalog/archetypes/{alias}/.ai/` 複製到目標 `.ai/`
   2. 從 `catalog/archetypes/{alias}/skills/` 複製到目標 `.github/skills/`
   3. 從 `catalog/archetypes/{alias}/prompts/` 複製到目標 `.github/prompts/`（若存在）
-  4. 根據訪談結果客製化欄位值（替換 identity.yaml 中的具體值、調整 principles.md 內容）
+  4. 若存在 `catalog/archetypes/{alias}/repo-seed/`，複製到目標 Repo 根目錄（保留既有檔案，不覆蓋使用者已存在內容）
+  5. 根據訪談結果客製化欄位值（替換 identity.yaml 中的具體值、調整 principles.md 內容）
 
 - **無預建內容** → 依照 Framework v2 規範直接產生（見 `context/framework/agent-role-repo-framework-v2.md`）
 
@@ -157,7 +158,9 @@ Step 1a 改為直接展示預設值（無需自動匹配）；Step 1b 只問 `di
 
 **技能品質（skills）**
 - [ ] 每個 Skill 的觸發條件用一句話說清楚？（不超過 25 字）
-- [ ] Skill 數量在 3-5 個之間？
+- [ ] Skill 數量符合 archetype 類型？
+  - 一般 archetype：3-5 個
+  - 流程型 archetype（例如 PM Discovery 流程）：6-8 個
 
 **介面品質（interfaces）**
 - [ ] exports.yaml 不為空？

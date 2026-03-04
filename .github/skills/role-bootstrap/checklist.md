@@ -16,6 +16,7 @@
 - [ ] 若有匹配原型，已在 decisions.md 記錄採用了哪個 archetype、客製了哪些欄位
 - [ ] 若無匹配原型，已在 decisions.md 記錄原因
 - [ ] 若 archetype 有預建內容（has_prebuilt: true），seed 檔案已複製到目標 Repo
+- [ ] 若 archetype 有 `repo-seed/`，流程目錄（如 01_inbox、05_product）已複製到目標 Repo
 - [ ] glossary.yaml 已填入至少 8 條角色專屬術語
 - [ ] 預設技能（skill-expand、copilot-sync）都存在於 .github/skills/
 
@@ -40,7 +41,7 @@
 - [ ] 每個技能的觸發條件（trigger）用一句話說清楚，不超過 25 字
 - [ ] 每個 SKILL.md 包含：用途、何時使用、流程（含模式標記）、品質標準、已知限制
 - [ ] 每個 Skill 目錄有 checklist.md、changelog.md、examples/
-- [ ] 初始技能數量在 3-5 個之間
+- [ ] 初始技能數量符合 archetype 類型（一般 3-5；流程型 6-8）
 
 ## 介面品質（interfaces）
 

@@ -1,5 +1,5 @@
 schema_version: "1.0"
-last_updated: "2026-03-02"
+last_updated: "2026-03-04"
 
 skills:
   - name: "PRD 撰寫"
@@ -28,3 +28,30 @@ skills:
     estimated_effort: medium
     phase: 2
     path: ".github/skills/stakeholder-align/SKILL.md"
+
+  - name: "信號升 OPP"
+    alias: "pm-move-inbox-to-opp-exp"
+    trigger: "當信號需升級為 OPP 時"
+    description: "完成 Outcome 對齊並建立 OPP 區塊"
+    mode: hybrid
+    estimated_effort: medium
+    phase: 1
+    path: ".github/skills/pm-move-inbox-to-opp-exp/SKILL.md"
+
+  - name: "OPP 入 Backlog"
+    alias: "pm-move-opp-exp-to-backlog"
+    trigger: "當 OPP 驗證通過要進 backlog 時"
+    description: "將 validated OPP 移入 backlog 並補齊評分欄位"
+    mode: hybrid
+    estimated_effort: medium
+    phase: 2
+    path: ".github/skills/pm-move-opp-exp-to-backlog/SKILL.md"
+
+  - name: "Backlog 移交工程"
+    alias: "pm-move-backlog-to-handoff"
+    trigger: "當 backlog ready 要移交工程時"
+    description: "建立 Product Brief 並完成 handoff"
+    mode: hybrid
+    estimated_effort: medium
+    phase: 3
+    path: ".github/skills/pm-move-backlog-to-handoff/SKILL.md"

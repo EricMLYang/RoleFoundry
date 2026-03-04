@@ -1,5 +1,5 @@
 schema_version: "1.0"
-last_updated: "2026-03-02"
+last_updated: "2026-03-04"
 description: "角色原型索引 - 提供各類角色的預設值和引導問題，加速 role-bootstrap 流程"
 
 archetypes:
@@ -7,16 +7,17 @@ archetypes:
     alias: "pm"
     icon: "📋"
     description: "負責產品策略、需求定義、優先順序決策"
-    path: "context/archetypes/pm/archetype.yaml"
+    path: "catalog/archetypes/pm/archetype.yaml"
     tags: ["business", "strategy", "cross-functional"]
     has_prebuilt: true
-    prebuilt_skills: 3
+    prebuilt_skills: 6
+    has_repo_seed: true
 
   - name: "架構師"
     alias: "architect"
     icon: "🏗️"
     description: "負責系統架構設計、技術選型、跨組件介面"
-    path: "context/archetypes/architect/archetype.yaml"
+    path: "catalog/archetypes/architect/archetype.yaml"
     tags: ["technical", "design", "system"]
     has_prebuilt: true
     prebuilt_skills: 3
@@ -25,7 +26,7 @@ archetypes:
     alias: "domain-expert"
     icon: "🎯"
     description: "負責特定業務領域的知識、規則、最佳實踐"
-    path: "context/archetypes/domain-expert/archetype.yaml"
+    path: "catalog/archetypes/domain-expert/archetype.yaml"
     tags: ["domain", "knowledge", "rules"]
     has_prebuilt: true
     prebuilt_skills: 3
@@ -34,7 +35,7 @@ archetypes:
     alias: "exam-tutor"
     icon: "📚"
     description: "協助學習者準備考試、掌握知識點、模擬測驗"
-    path: "context/archetypes/exam-tutor/archetype.yaml"
+    path: "catalog/archetypes/exam-tutor/archetype.yaml"
     tags: ["education", "learning", "assessment"]
     has_prebuilt: true
     prebuilt_skills: 3
@@ -44,7 +45,7 @@ archetypes:
     icon: "🎓"
     parent: "exam-tutor"
     description: "專注 IT／資訊技術認證考試的備考輔助（題庫管理、考點解析、弱點追蹤）"
-    path: "context/archetypes/cert-tutor/archetype.yaml"
+    path: "catalog/archetypes/cert-tutor/archetype.yaml"
     tags: ["education", "certification", "IT", "cloud", "assessment"]
     has_prebuilt: true
     prebuilt_skills: 3

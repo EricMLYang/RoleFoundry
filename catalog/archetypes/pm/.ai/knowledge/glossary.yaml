@@ -30,6 +30,15 @@ terms:
     definition: "所有已收集但尚未排入 Sprint 的需求池"
     usage: "需求評估後進入 Backlog，按優先順序排序"
 
+  - term: "Outcome"
+    definition: "以使用者行為或業務結果定義的目標，不是功能清單"
+    usage: "OPP 必須先對齊 Outcome 才能啟動驗證"
+
+  - term: "OPP"
+    full_name: "Opportunity + Experiment"
+    definition: "以問題或機會為核心，附帶可驗證假說與實驗方式的工作單位"
+    usage: "Inbox 信號經篩選後升級為 OPP"
+
   - term: "MVP"
     full_name: "Minimum Viable Product"
     definition: "最小可行產品，能驗證核心假設的最小功能集合"
@@ -54,3 +63,11 @@ terms:
   - term: "Feature Flag"
     definition: "功能開關，允許在不重新部署的情況下啟用/停用功能"
     usage: "漸進式發布時使用 Feature Flag 控制曝光範圍"
+
+  - term: "Handoff"
+    definition: "PM 將已準備完成的需求正式移交工程團隊的節點"
+    usage: "Backlog 項目在 ready 後需附 Product Brief 才能 handoff"
+
+  - term: "Product Brief"
+    definition: "工程進入 PDR 前的執行輸入文件，整合背景、範圍、證據與風險"
+    usage: "backlog -> handoff 階段必須產出 Product Brief"

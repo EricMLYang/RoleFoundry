@@ -1,0 +1,13 @@
+# imports.yaml — pm archetype 外部依賴聲明
+
+imports:
+  - from: "domain-expert"
+    needs:
+      - "業務規則與領域邏輯正確性確認"
+    reason: "OPP 與 PRD 的需求敘述需對齊真實業務規則"
+
+  - from: "architect"
+    needs:
+      - "技術可行性評估"
+      - "重大方案的架構風險評估"
+    reason: "PM 對方案負責取捨，但最終可行性需技術角色確認"

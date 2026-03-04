@@ -2,6 +2,7 @@ schema_version: "1.0"
 archetype_name: "產品經理"
 archetype_alias: "pm"
 archetype_icon: "📋"
+last_updated: "2026-03-04"
 
 # ========================================
 # 預設值（role-bootstrap 時自動填入）
@@ -27,6 +28,19 @@ defaults:
       - "使用者訪談與需求萃取"
       - "里程碑規劃與 Sprint 設計"
       - "競品分析與市場調研"
+      - "Discovery 流程治理（Inbox -> OPP -> Backlog -> Handoff）"
+    workflow_suggestions:
+      - "Inbox 信號分流與升級規則"
+      - "OPP 驗證狀態治理（identified/experimenting/validated）"
+      - "Backlog 評分與移交節點（ready/handed-off）"
+
+  process_seed:
+    enabled: true
+    path: "catalog/archetypes/pm/repo-seed/"
+    description: "提供 PM 三階段資料夾：00_context/、01_inbox/、05_product/（Outcomes -> OPP+Experiment -> Backlog）"
+    apply_when:
+      - "target repo type = project"
+      - "使用者選擇沿用 Discovery 流程"
   
   boundaries:
     typical_owns:
@@ -52,6 +66,7 @@ discovery_questions:
     - "這個 PM 主要服務什麼類型的產品？（B2B SaaS / B2C App / Internal Tool / Platform）"
     - "這個 PM 所在的組織規模？（新創 / 中型 / 大型企業）"
     - "這個 PM 需要和哪些角色協作最頻繁？"
+    - "是否已有固定流程（例如 Inbox -> OPP -> Backlog -> Handoff）需要延續？"
   
   differentiation:
     - "這個 PM 有什麼特殊的領域背景或專長？"
@@ -71,6 +86,9 @@ quality_criteria_suggestions:
   - "優先順序有明確的業務理由（不是「老闆說要」）？"
   - "PRD 讓工程師不需要再問問題就能開始開發？"
   - "有明確的成功指標（可量化）？"
+  - "每個 OPP 都有驗證方式與成功標準，且驗證通過才進 Backlog？"
+  - "重要取捨是否有決策記錄可追溯？"
+  - "Inbox/OPP/Backlog 三段狀態欄位是否一致，且轉移條件清楚？"
 
 # ========================================
 # 常見 Anti-patterns（作為提醒）
@@ -86,6 +104,8 @@ common_anti_patterns:
     description: "做決策不看數據，或只看支持自己觀點的數據"
   - pattern: "利害關係人討好"
     description: "試圖滿足所有人，結果什麼都做不好"
+  - pattern: "狀態漂移"
+    description: "Outcome/OPP/Backlog 狀態定義不一致，導致跨團隊誤解"
 
 # ========================================
 # 變體提示（幫助使用者思考是否需要客製）
@@ -99,3 +119,5 @@ variants_hint:
     difference: "數據產品、資料管線、分析平台"
   - name: "AI PM"
     difference: "ML 產品、模型治理、人機協作"
+  - name: "Discovery Ops PM"
+    difference: "重視流程治理、狀態轉移規則、可追溯交付節奏"

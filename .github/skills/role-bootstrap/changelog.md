@@ -1,5 +1,10 @@
 # Changelog — role-bootstrap
 
+## v1.1 (2026-03-04)
+
+- 新增 `repo-seed/` 複製規則：若 archetype 提供流程骨架，bootstrap 時一併帶入
+- 技能數量驗收改為依 archetype 類型判斷（一般 3-5；流程型 6-8）
+
 ## v1.0 (2026-03-02)
 
 **初始版本**
