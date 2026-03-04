@@ -179,3 +179,78 @@ B. 保留 `.sh`，並提供等價 `.ps1` 腳本
 **Trade-off**：
 - 需維護兩套腳本，增加少量維護成本
 - 換取跨平台可用性與流程穩定性
+
+---
+
+## ADR-008: PM archetype 納入 Discovery 流程治理提示
+
+**日期**：2026-03-04
+**狀態**：確定
+
+**情境**：
+實戰 PM Repo（MI_PM）顯示 PM 角色常需維護固定流程節奏（Inbox -> OPP -> Backlog -> Handoff），原 archetype 對這類流程治理著墨不足。
+
+**選項**：
+A. 維持通用 PM archetype，不加入流程治理提示  
+B. 在 PM archetype 增加流程治理能力、品質標準與反模式提示
+
+**決策**：選項 B — 增加流程治理提示
+
+**理由**：
+- 讓 role-bootstrap 在 PM 類角色時更容易對齊真實交付節奏
+- 降低「先做再補驗證」造成的狀態漂移風險
+- 保持 archetype 可擴充性（僅加提示，不綁定特定產品流程）
+
+**Trade-off**：
+- archetype 內容稍微增加，初次閱讀負擔上升
+- 換取更貼近實戰 PM Repo 的起始品質
+
+---
+
+## ADR-009: 引入 util-pptx 為跨角色通用技能
+
+**日期**：2026-03-04
+**狀態**：確定
+
+**情境**：
+MI_PM 已有可運作的 `util-pptx` 能力（讀取、編修、新建簡報），但 RoleFoundry 本體缺少對應技能，導致後續角色 Repo 無法直接複用這套流程。
+
+**選項**：
+A. 將 `util-pptx` 留在 MI_PM，其他 Repo 需要時再手動搬運  
+B. 將 `util-pptx` 匯入 RoleFoundry，納入 `_index.yaml` 與橋接檔
+
+**決策**：選項 B — 匯入 RoleFoundry 並正式納管
+
+**理由**：
+- 把已驗證流程提升為可複用能力，降低重工
+- 讓「涉及 .pptx」任務有明確 trigger 與統一 QA 基線
+- 透過 `skill-author` 結構補齊（checklist/changelog/examples），確保 Framework v2 合規
+
+**Trade-off**：
+- 增加一個技能的維護成本
+- 換取跨 Repo 一致的簡報處理流程與可追溯品質標準
+
+---
+
+## ADR-010: PM archetype 內建 MI 三階段流程 seed
+
+**日期**：2026-03-04
+**狀態**：確定
+
+**情境**：
+MI_PM 已驗證可運作的 product 三階段流程（Outcomes -> OPP+Experiment -> Backlog/Handoff），但 RoleFoundry 的 PM archetype 只提供通用技能，缺少可直接複製的資料夾與遷移技能。
+
+**選項**：
+A. 僅在文件中描述流程，保留使用者自行建目錄  
+B. 將流程抽成 archetype `repo-seed/` + 三個狀態遷移技能，納入 role-bootstrap
+
+**決策**：選項 B — 納入 PM archetype 預建內容
+
+**理由**：
+- 新 PM Repo 可直接帶入一致的資料夾與狀態流轉規則
+- 降低每次「從頭重建流程」的重工成本
+- 讓 role-bootstrap 對 PM 類型具備更高的一次可用性
+
+**Trade-off**：
+- PM archetype 的初始內容變多，閱讀負擔上升
+- 換取可直接運作的流程骨架與更高一致性

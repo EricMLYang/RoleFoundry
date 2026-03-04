@@ -115,3 +115,38 @@
 - 新增 `tools/scaffold.ps1`
 - 新增 `tools/sync-injection.ps1`
 - `AGENTS.md`、`README.md`、`docs/getting-started.md`、`docs/faq.md` 更新雙腳本用法
+
+---
+
+## Round 6（2026-03-04）— MI_PM 實戰回饋到 PM archetype
+
+**來源**：`C:\Users\1806011\Projects\MI_PM` 導入 Framework v2 的落地結果
+
+**更新內容**：
+- `catalog/archetypes/pm/archetype.yaml` 新增流程治理提示（Inbox -> OPP -> Backlog -> Handoff）
+- 補強 PM archetype 的品質標準（驗證門檻與決策可追溯）
+- 新增反模式「狀態漂移」
+- `catalog/archetypes/pm/sample-principles.md` 補入「狀態即契約」原則
+
+**目的**：
+- 提高 PM archetype 在真實專案流程中的可用性
+- 讓後續 role-bootstrap 建出的 PM Repo 更快進入可運作狀態
+
+---
+
+## Round 7（2026-03-04）— 萃取 MI_PM 三階段流程到 PM archetype
+
+**來源**：`C:\Users\1806011\Projects\MI_PM` 的 product 流程實戰
+
+**更新內容**：
+- 新增 `catalog/archetypes/pm/repo-seed/`，提供 `00_context/`、`01_inbox/`、`05_product/` 流程骨架
+- PM archetype 新增三個遷移技能：
+  - `pm-move-inbox-to-opp-exp`
+  - `pm-move-opp-exp-to-backlog`
+  - `pm-move-backlog-to-handoff`
+- `role-bootstrap` 新增 `repo-seed/` 自動複製規則
+- `catalog/archetypes/_index.yaml` 更新 PM 預建技能數與 `has_repo_seed`
+
+**目的**：
+- 確保未來新建 PM Repo 自帶一致的資料夾與狀態轉移流程
+- 將 MI_PM 的驗證流程沉澱為可重用原型資產
